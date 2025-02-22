@@ -626,6 +626,15 @@
 
     // console.log(`sum of marks is ${sumOfNumbers()}`);
 
+
+
+
+    // const sumOfMarks = students.reduce((acc, {marks}) => acc + marks ,0);
+
+    // console.log(sumOfMarks);
+
+
+
 }
 
 {
@@ -671,63 +680,165 @@
     // }
 
     // console.log(`average of all digits is ${ave(1, 2, 3, 4, 5)}`);
-    
+
 }
 {
-    function returnValues(val1, val2, ...products) {
+    // function returnValues(val1, val2, ...products) {
+
+    //     return [val1, val2, products.join(" , ")];
+    // }
+
+    // console.log(`the products : ${returnValues("soap", "waternbottle", "makeup", "chocolate", "biscuits")}`);
+
+}
+{
+    // const user1 = {
+    //     name : "rinkal",
+    //     age : 17
+    // };
+
+    // const user2 = {
+    //     name : "krina",
+    //     age : 23
+    // }
+
+    // function printInfo(...obj) {
+
+    //     obj.forEach(({name, age}) => {
+    //         console.log(`${name}'s age is ${age}`);           
+    //     })       
+    // }
+
+    // printInfo(user1, user2); 
+}
+
+{
+    // const arr1 = [1, 2, 3];
+    // const arr2 = [4, 5, 6];
+    // const arr3 = [7, 8, 9];
+    // const arr4 = [10, 11, 12];
+
+    // function getAllValues(...arr) {
+
+    //     arr.forEach((value) => {
+    //         console.log(`the values are : ${value[2
+
+    //         ]}`);            
+    //     })
+    // }
+
+    // getAllValues(arr1, arr2, arr3, arr4)
+
+
+}
+
+// SCOPE 
+// -------------------------------------------------------------------------------------------------------------------------------------
+
+// const a = 13;
+// const b = 14;
+
+// here a and b are cousins
+
+// function sum() {
+
+//     const a = 15;     
+//     // const b = 17;
+
+//     // here a and b are siblings, why we take that cousins when we have our own siblings.
+//     return a+b;
+// }
+
+// console.log(a);
+
+// console.log(sum());
+
+
+
+
+// const a = 10;
+// const b = 11;
+
+// function outer() {
+//     const a = 12;
+//     // const b = 13;
+
+//     console.log(`outer sum : ${a+b}`);
+
+
+//     function inner() {
+
+//         const a = 10;
+
+//         return a*b;
+//     }
+
+//     console.log(`unner multipky : ${inner()}`);
+
+// }
+
+// console.log(a+b);
+
+// outer();
+
+// var localVar = "i am global"
+
+// function localExample() {
+//     var localVar = "I am local!";
+//     console.log(localVar); // ✅ Accessible inside
+//   }
+
+//   localExample();
+//   console.log(localVar); // ❌ Error: localVar is not defined
+
+
+
+// understanding of scope and order of execution
+// let globalVar = "I'm global";
+
+// function outside() {
+
+//     function inside() {
+//         let globalVar = "I'm local in bar";
+//         console.log(`inside : ${globalVar}`);
+
+//         function inInInside() {
+//             let globalVar = "im very local";
+//             console.log(`in in inside : ${globalVar}`);
+            
+//         }
+
+//         inInInside();
+//     }
+
+//     inside();
+
+//     console.log(`outside : ${globalVar}`);
+
+// }
+
+// outside();
+
+
+
+
+
+// function outer() {
+//     let count = 0;
+
+//     return function inner() {
+//         count++;
+//         console.log(count);
         
-        return [val1, val2, products.join(" , ")];
-    }
+//     }
+// }
 
-    console.log(`the products : ${returnValues("soap", "waternbottle", "makeup", "chocolate", "biscuits")}`);
-    
-}
-{
-    const user1 = {
-        name : "rinkal",
-        age : 17
-    };
-
-    const user2 = {
-        name : "krina",
-        age : 23
-    }
-
-    function printInfo(...obj) {
-        
-        obj.forEach(({name, age}) => {
-            console.log(`${name}'s age is ${age}`);           
-        })       
-    }
-
-    printInfo(user1, user2); 
-    
-    // [
-    //     {},
-    //     {}
-    // ]
-}
-
-{
-    const arr1 = [1, 2, 3];
-    const arr2 = [4, 5, 6];
-    const arr3 = [7, 8, 9];
-    const arr4 = [10, 11, 12];
-
-    function getAllValues(...arr) {
-
-        arr.forEach((value) => {
-            console.log(`the values are : ${value[2
-                
-            ]}`);            
-        })
-    }
-
-    getAllValues(arr1, arr2, arr3, arr4)
-
-
-}
-
+// const counter = outer();
+// counter();
+// counter();
+// counter();
+// counter();
+// counter();
 
 
 
@@ -749,28 +860,28 @@
     // let sum =0;
     // arr.forEach((num) => sum += num);
     // console.log(sum);
-    
-    
+
+
 }
 
 {
-    const arr = [1, 2, 3, 4, 5, 4, 2, 4];
+    // const arr = [1, 2, 3, 4, 5, 4, 2, 4];
 
-    const occur = arr.reduce((acc, num) => {
-        acc[num] = (acc[num] || 0) + 1;
-        return acc;
-    }, {});
+    // const occur = arr.reduce((acc, num) => {
+    //     acc[num] = (acc[num] || 0) + 1;
+    //     return acc;
+    // }, {});
 
     // console.log(occur);
-    
+
 }
 
 {
-    const arr = [23, 56, 14, 29];
-    const max = arr.reduce((acc, num) => num > acc ? num : acc);
+    // const arr = [23, 56, 14, 29];
+    // const max = arr.reduce((acc, num) => num > acc ? num : acc);
 
     // console.log(max);
-    
+
 }
 
 {
@@ -807,33 +918,33 @@
     // }, {});
 
     // console.log(grouping);
-    
-    
-} 
+
+
+}
 
 {
-    const arr = [[1, 2], [3, 4], [5, 6]];
+    // const arr = [[1, 2], [3, 4], [5, 6]];
 
-    const flatted = arr.reduce((acc, num) => 
-        acc.concat(num)
-    , []);
+    // const flatted = arr.reduce((acc, num) => 
+    //     acc.concat(num)
+    // , []);
 
     // console.log(flatted);
-    
+
 }
 {
-    const cart = [
-        {item : "soap", prices : 20},
-        {item : "biscuit", prices : 20},
-        {item : "toothbrush", prices : 20},
-        {item : "chocolate", prices : 20},
-        {item : "bed", prices : 2000}
-    ]
+    // const cart = [
+    //     {item : "soap", prices : 20},
+    //     {item : "biscuit", prices : 20},
+    //     {item : "toothbrush", prices : 20},
+    //     {item : "chocolate", prices : 20},
+    //     {item : "bed", prices : 2000}
+    // ]
 
 
-    // reduce👇
-    const sum = cart.reduce((acc, product) => acc + product.prices, 0)
-    console.log(sum);
+    // // reduce👇
+    // const sum = cart.reduce((acc, product) => acc + product.prices, 0)
+    // console.log(sum);
 
 
 
@@ -844,34 +955,34 @@
     // cart.forEach(({prices}) => sum += prices);
 
     // console.log(sum);
-    
-    
+
+
 }
 
 {
-    const arr = ["apple", "bannana", "cherry", "apple", "cherry"];
+    // const arr = ["apple", "bannana", "cherry", "apple", "cherry"];
 
-    // reduce👇
-    // const remobing = arr.reduce((acc, fruit) => {
-    //     if(!acc.includes(fruit)) {
-    //         acc.push(fruit);
+    // // reduce👇
+    // // const remobing = arr.reduce((acc, fruit) => {
+    // //     if(!acc.includes(fruit)) {
+    // //         acc.push(fruit);
+    // //     }
+    // //     return acc;
+    // // }, [])
+    // // console.log(remobing);
+
+
+    // // for-each👇
+    // let newArr = [];
+    // arr.forEach((fruit) => {
+    //     if(!newArr.includes(fruit)) {
+    //         newArr.push(fruit)            
     //     }
-    //     return acc;
-    // }, [])
-    // console.log(remobing);
+    //     // return arr;
+    // });
+    // console.log(newArr);
 
 
-    // for-each👇
-    let newArr = [];
-    arr.forEach((fruit) => {
-        if(!newArr.includes(fruit)) {
-            newArr.push(fruit)            
-        }
-        // return arr;
-    });
-    console.log(newArr);
-    
-    
 }
 
 
