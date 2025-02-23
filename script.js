@@ -558,6 +558,30 @@
 // FUNCTIONS
 // --------------------------------------------------------------------------------------------------------------------------------------
 
+
+// hoisted
+// print1()
+// function print1() {
+//     console.log(`print1`);
+
+// }
+
+
+// not hoisted
+
+// print()
+
+// let print = function() {
+//     console.log(`print`);
+
+// }
+
+// variable is hoisted but TDZ(temporal declaration zone) applies 
+
+// let a;
+// console.log(a);
+// a = 5;
+
 {
     // sum of two numbers, after checking the correct input(the input should be a number).
     // function printSum(a, b) {
@@ -732,6 +756,43 @@
 
 }
 
+{
+    // simple arrow function
+    const print = () => console.log(`print`);
+
+    print()
+
+
+
+    // prompt with arrow function
+
+    // let num = prompt("The numbers you want to sum");
+    // num = num.split(" ");
+
+    // const average = (input) => {
+
+    //     const reduceVar = input.reduce((acc, value, index, arr) => {
+    //         acc += Number(value);
+    //         const av = acc/ arr.length;
+    //         return index === arr.length-1 ? av.toFixed(2) : acc;
+    //     }, 0);
+
+    //     return reduceVar;
+    // }
+
+    // console.log(average(num));
+
+
+
+    // const sum = (input) => {
+    //     const reduceVar = input.reduce((acc, value) => acc + Number(value), 0);
+
+    //     return reduceVar;
+    // }
+
+    // console.log(sum(num));
+}
+
 // SCOPE 
 // -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -805,7 +866,7 @@
 //         function inInInside() {
 //             let globalVar = "im very local";
 //             console.log(`in in inside : ${globalVar}`);
-            
+
 //         }
 
 //         inInInside();
@@ -829,7 +890,7 @@
 //     return function inner() {
 //         count++;
 //         console.log(count);
-        
+
 //     }
 // }
 
@@ -841,6 +902,45 @@
 // counter();
 
 
+
+// if(true) {
+
+//     var x = 13;
+//     function printA() {
+//         console.log(`inner : ${x}`);
+
+//     }
+
+// }
+
+// // const result = outer();
+// // result();
+
+// printA()
+// console.log(x);
+
+
+
+
+// function outer() {
+
+//     let arr = [1, 2, 3, 4, 5];
+
+//     return function inner() {
+//         const sum = arr.reduce((acc, value) => acc + value, 0);
+//         console.log(`sum is ${sum}`);
+
+//         function inInInner() {
+//             const multy = arr.reduce((acc, value) => acc * value, 1)
+//             return multy;
+//         }
+
+//         console.log(`product is ${inInInner()}`);
+
+//     }
+// }
+
+// outer()();
 
 // REDUCE
 // -------------------------------------------------------------------------------------------------------------------------------------
