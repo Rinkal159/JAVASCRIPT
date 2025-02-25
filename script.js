@@ -583,6 +583,31 @@
 // a = 5;
 
 {
+    function one() {
+
+        function two() {
+            console.log(`namaste`);
+
+            function three() {
+                console.log(`hola`);
+                
+            }
+
+            three()
+            
+        }
+
+        two()
+
+        console.log(`hello`);
+
+        
+    }
+
+    one()
+}
+
+{
     // sum of two numbers, after checking the correct input(the input should be a number).
     // function printSum(a, b) {
     //     if ((typeof a === "number" && typeof b === "number") && (!(Number.isNaN(a) || Number.isNaN(b)))) {
@@ -758,9 +783,9 @@
 
 {
     // simple arrow function
-    const print = () => console.log(`print`);
+    // const print = () => console.log(`print`);
 
-    print()
+    // print()
 
 
 
@@ -791,6 +816,146 @@
     // }
 
     // console.log(sum(num));
+
+
+    // const obj = {
+    //     username: "rinkal",
+    //     age: 17,
+
+    //     printInfo: function ({ username, age }) {
+    //         console.log(`${username}'s age is ${age}`);
+
+    //     },
+
+    //     printObj: function() {
+    //         console.log(this)
+
+    //     }
+
+    // }
+
+    // obj.printObj()    
+    // obj.age = 18;
+    // obj.printObj()
+    // obj.printInfo(obj)
+
+
+    // const demo = function() {
+    //     const a = 13;
+    //     console.log(this);
+        
+    // }
+    // // demo()
+
+    // // const demo2 = () => {
+    // //     const a = 13;
+    // //     console.log(this);
+        
+    // // }
+    // // demo2()
+
+    // const obj = {
+    //     username : "rinkal159",
+
+    //     name : {
+    //         fname : "rinkal",
+    //         lname : "singapuri"
+    //     },
+
+    //     age : 18,
+
+    //     // printInfo : function({fname, lname}) {
+    //     //     console.log(`first name is ${fname} and last name is ${lname}`);
+            
+    //     // }
+
+    //     printInfo : ({username, name : {fname}}) => {
+    //         console.log(`usename is ${username} and fname is ${fname}`);
+            
+    //     }
+    // }
+
+    // obj.printInfo(obj)
+
+
+    // IIFE(Immediately Invoked Function Expression)
+
+    // for (let i = 0; i <= 3; i++) {
+
+    // const print = () => console.log(`hello world! ${i}`);
+    // print();
+
+    // (function() {
+    //     console.log(`hellow world! : ${i}`);
+
+    // })();
+    // }
+
+    // const a = 12;
+    // const b = 14;
+    // const IIFE = ((...num) => {
+    //     const sum = num.reduce((acc, value) => acc + value, 0)
+    //     return sum;
+
+
+    // })(23, 45, 56, 78, 100);
+
+    // console.log(IIFE);
+
+
+    // const root = 12;
+    // const a = root;
+
+    // const IIFE = ((x) => {
+    //     return {
+    //         value : () => console.log( `Root value : ${root}`),
+    //         increment : () => console.log(`Increment : ${++x}`),
+    //         decrement : () => console.log(`Decrement : ${--x}`)        
+    //     }
+    // })(a)
+
+    // IIFE.value()
+    // IIFE.increment()
+    // IIFE.decrement()
+    // IIFE.increment()
+    // IIFE.increment()
+    // IIFE.increment()
+    // IIFE.value() 
+
+
+    // let root = 0;
+    // let a = root;
+
+    // const returnInfo =  (x) => {
+
+
+    //     return {
+    //         value: () => console.log(`Root value : ${root}`),
+    //         increment: () => console.log(`Increment : ${++x}`),
+    //         decrement: () => console.log(`Decrement : ${--x}`)
+    //     }
+    // }
+
+    // const handler = returnInfo(a);
+    // handler.value()
+    // handler.increment()
+    // handler.decrement()
+    // handler.value()
+
+
+
+
+    // let a = 4;
+
+    // const IIFE = ((b) => {
+    //     return a+b;
+    // })( 5)
+
+    // console.log(IIFE);
+    
+
+
+
 }
 
 // SCOPE 
