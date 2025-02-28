@@ -1111,7 +1111,7 @@
 // -------------------------------------------------------------------------------------------------------------------------------------
 
 {
-    const arr = [1, 2, 3, 4, 5, 4, 2, 4];
+    let arr = [1, 2, 3, 4, 5, 4, 2, 4];
 
     // reduce👇
 
@@ -1125,6 +1125,16 @@
     // let sum =0;
     // arr.forEach((num) => sum += num);
     // console.log(sum);
+
+
+    // doubling values using foreach
+    // arr.forEach((num, i, arr) => {
+    //     arr[i] = num*2;
+
+    // });
+    // console.log(arr);
+
+
 
 
 }
@@ -1251,6 +1261,139 @@
 }
 
 
+// setTimeout (higher order function)
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+{
+    // function hello(name) {
+    //     console.log(`hello ${name}`);
+
+    // }
+    // setTimeout(hello, 2000, "rinkal");
+
+    // console.log(`after`);
+}
+
+{
+    // console.log(`before`);
+    // setTimeout(() => {
+    //     console.log(`setTimeout`);
+    // }, 2000);
+    // console.log(`after`);
+}
+
+{
+    // let arr = [1, 2, 3, 4, 5];
+
+    // setTimeout((arr1) => {
+
+    //     arr1.forEach((num, i, arr) => {
+    //         arr[i] = num*2;
+    //     });
+
+    //     console.log(arr1);
+
+    //     // console.log(arr1);
+
+
+    // }, 1000, arr)
+
+}
+
+{
+    // let arr1 = ["hi", "hello", 2]
+    // for (let i = 0; i < arr1.length; i++) {
+    //     setTimeout(() => {
+    //         console.log(arr1[i]);
+
+    //     }, i*2000)
+
+    // }
+    // console.log(`after`);
+
+}
+
+
+// for of and for in nested funda
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+{
+    // const arr = [[1, 2], [3, 4], 5];
+
+    // for (let num of arr) {
+    //     if (Array.isArray(num)) {  // Check if it's an array before looping
+    //         for (let nested of num) {
+    //             console.log(nested);
+    //         }
+    //     }
+    //      else {
+    //         console.log(num);  // Print number directly
+    //     }
+    // }
+
+}
+
+{
+    // const obj = {
+    //     name: "rinkal",
+    //     age: 17,
+
+    //     nested: {
+    //         hobby: "play",
+    //         passion: "programming"
+    //     }
+    // }
+
+    // for (let key in obj) {
+
+    //     if (typeof obj[key] === "object") {
+    //         console.log(`${key} is a nested object`);
+    //     } else {
+    //         console.log(`${key} is not a nested object`);
+    //     }
+
+    // }
+
+}
+
+
+
+// CALL BACK EXAMPLE
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
+let a = 12;
+let b = 14;
+function calculator(x, y, callback) {
+    console.log(`here a is ${x}, and b is ${y}`);
+    console.log(`the result : ${callback(x, y)}`);
+
+}
+
+function adding(x, y) {
+    return x + y;
+}
+function substracting(x, y) {
+    return x - y;
+}
+function multiplicating(x, y) {
+    return x * y;
+}
+function dividing(x, y) {
+    return x / y;
+}
+
+calculator(a, b, adding)
+calculator(a, b, substracting)
+calculator(a, b, multiplicating)
+calculator(a, b, dividing)
+
+
+// hello("rinkal", age)
+
+
+
+
 
 // RANDOM NUMBER GUESS GAME
 // -----------------------------------------------------------------------------------------------------------------------------------
@@ -1293,82 +1436,82 @@
 
 // TO-DO ------------------------------------------------------------------------------------------------------------------
 
-let todo = prompt("Task/Tasks : ");
-todo = todo.split(" ");
+// let todo = prompt("Task/Tasks : ");
+// todo = todo.split(" ");
 
-const oglist = [...todo];
+// const oglist = [...todo];
 
-let req = prompt(" type list/ add/ remove or oglist to perform respected operations");
+// let req = prompt(" type list/ add/ remove or oglist to perform respected operations");
 
-while (true) {
-    if (req == "quit") {
-        console.log(`the app is closing`);
-        break;
+// while (true) {
+//     if (req == "quit") {
+//         console.log(`the app is closing`);
+//         break;
 
-    }
+//     }
 
-    if (req == "list") {
-        console.log(`The list : ${todo.join(", ")}`);
-        console.log();
+//     if (req == "list") {
+//         console.log(`The list : ${todo.join(", ")}`);
+//         console.log();
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
 
-    }
+//     }
 
-    else if (req == "add") {
+//     else if (req == "add") {
 
-        let addTask = prompt("Task/Tasks you want to add : ");
-        addTask = addTask.split(" ")
+//         let addTask = prompt("Task/Tasks you want to add : ");
+//         addTask = addTask.split(" ")
 
-        console.log(`tasks you want to add : ${addTask.join(", ")}`);
+//         console.log(`tasks you want to add : ${addTask.join(", ")}`);
 
-        addTask.forEach((task) => {
-            if (todo.includes(task)) {
-                console.log(`the task : "${task}" you want to add is already in the list.`);
-            } else {
-                todo.push(task);
-            }
-        })
+//         addTask.forEach((task) => {
+//             if (todo.includes(task)) {
+//                 console.log(`the task : "${task}" you want to add is already in the list.`);
+//             } else {
+//                 todo.push(task);
+//             }
+//         })
 
-        console.log(`updated list after adding tasks : ${todo.join(", ")}`);
-        console.log();
+//         console.log(`updated list after adding tasks : ${todo.join(", ")}`);
+//         console.log();
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
-
-
-    }
-
-    else if (req == "remove") {
-
-        let deleteTask = prompt("Task/Tasks you want to delete : ");
-        deleteTask = deleteTask.split(" ")
-
-        console.log(`the tasks you want to delet : ${deleteTask.join(", ")} `);
-
-        deleteTask.forEach((task) => {
-            if (!todo.includes(task)) {
-                console.log(`the task : "${task}" you want to delete is not in the list.`);
-            }
-        })
-
-        todo = todo.filter(task => !deleteTask.includes(task));
-        console.log(`updated list : ${todo.join(", ")}`);
-        console.log();
-
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
 
 
-    }
+//     }
 
-    else if (req == "oglist") {
-        console.log(`The original list : ${oglist.join(", ")}`);
+//     else if (req == "remove") {
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         let deleteTask = prompt("Task/Tasks you want to delete : ");
+//         deleteTask = deleteTask.split(" ")
 
-    }
+//         console.log(`the tasks you want to delet : ${deleteTask.join(", ")} `);
 
-    else {
-        req = prompt(`Invalid command, please Type list/ add/ remove/ oglist or quit:`);
-    }
+//         deleteTask.forEach((task) => {
+//             if (!todo.includes(task)) {
+//                 console.log(`the task : "${task}" you want to delete is not in the list.`);
+//             }
+//         })
 
-}
+//         todo = todo.filter(task => !deleteTask.includes(task));
+//         console.log(`updated list : ${todo.join(", ")}`);
+//         console.log();
+
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
+
+
+//     }
+
+//     else if (req == "oglist") {
+//         console.log(`The original list : ${oglist.join(", ")}`);
+
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
+
+//     }
+
+//     else {
+//         req = prompt(`Invalid command, please Type list/ add/ remove/ oglist or quit:`);
+//     }
+
+// }
