@@ -202,10 +202,39 @@
 
 }
 
+{
+    // let isLoggedIn = false;
+    // console.log((isLoggedIn=== true && "Welcome! user") || "Please Log yourself");
+    
+}
+
+{
+    let arr = [1, 2, 3, 4, 5];
+
+    for (const num of arr) {
+        console.log(num);
+        
+    }
+
+    const obj = {
+        name : "rinkal",
+        age : 17
+    }
+
+    for (const key in obj) {
+        console.log(`key is ${key} and its value is ${obj[key]}`);
+        
+    }
+}
+
 
 
 // FOR EACH
 // --------------------------------------------------------------------------------------------------------------------------------------
+
+let arr = [1, 2, 3, 4, 5];
+arr.forEach((value) => console.log(value));
+
 {
 
 
@@ -446,19 +475,19 @@
     //     }
     // });
 
-    // ☝️ the better option for defineproperty when the object inherites from other object
+    // // ☝️ the better option for defineproperty when the object inherites from other object
 
     // Object.defineProperty(pet, "age", {
     //     value : 14,
     //     writable : false
     // })
 
-    // pet.intro();
+    // // pet.intro();
 
     // pet.species = "cat";
 
-    // console.log(pet.species);
-    // console.log(animal.species);
+    // // console.log(pet.species);
+    // // console.log(animal.species);
 
     // for(key in pet) {
     //     if(pet.hasOwnProperty(key)) {
@@ -1227,25 +1256,27 @@
 {
     // const arr = ["apple", "bannana", "cherry", "apple", "cherry"];
 
-    // // reduce👇
-    // // const remobing = arr.reduce((acc, fruit) => {
-    // //     if(!acc.includes(fruit)) {
-    // //         acc.push(fruit);
-    // //     }
-    // //     return acc;
-    // // }, [])
-    // // console.log(remobing);
+    // reduce👇
+    // const duplicate = arr.reduce((acc, fruit) => {
+    //     if(!acc.includes(fruit)) {
+    //         acc.push(fruit);
+    //     }
+    //     return acc;
+    // }, [])
+    // console.log(duplicate);
 
 
-    // // for-each👇
+    // for-each👇
     // let newArr = [];
     // arr.forEach((fruit) => {
     //     if(!newArr.includes(fruit)) {
     //         newArr.push(fruit)            
     //     }
-    //     // return arr;
     // });
     // console.log(newArr);
+
+
+    
 
 
 }
@@ -1293,82 +1324,82 @@
 
 // TO-DO ------------------------------------------------------------------------------------------------------------------
 
-let todo = prompt("Task/Tasks : ");
-todo = todo.split(" ");
+// let todo = prompt("Task/Tasks : ");
+// todo = todo.split(" ");
 
-const oglist = [...todo];
+// const oglist = [...todo];
 
-let req = prompt(" type list/ add/ remove or oglist to perform respected operations");
+// let req = prompt(" type list/ add/ remove or oglist to perform respected operations");
 
-while (true) {
-    if (req == "quit") {
-        console.log(`the app is closing`);
-        break;
+// while (true) {
+//     if (req == "quit") {
+//         console.log(`the app is closing`);
+//         break;
 
-    }
+//     }
 
-    if (req == "list") {
-        console.log(`The list : ${todo.join(", ")}`);
-        console.log();
+//     if (req == "list") {
+//         console.log(`The list : ${todo.join(", ")}`);
+//         console.log();
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
 
-    }
+//     }
 
-    else if (req == "add") {
+//     else if (req == "add") {
 
-        let addTask = prompt("Task/Tasks you want to add : ");
-        addTask = addTask.split(" ")
+//         let addTask = prompt("Task/Tasks you want to add : ");
+//         addTask = addTask.split(" ")
 
-        console.log(`tasks you want to add : ${addTask.join(", ")}`);
+//         console.log(`tasks you want to add : ${addTask.join(", ")}`);
 
-        addTask.forEach((task) => {
-            if (todo.includes(task)) {
-                console.log(`the task : "${task}" you want to add is already in the list.`);
-            } else {
-                todo.push(task);
-            }
-        })
+//         addTask.forEach((task) => {
+//             if (todo.includes(task)) {
+//                 console.log(`the task : "${task}" you want to add is already in the list.`);
+//             } else {
+//                 todo.push(task);
+//             }
+//         })
 
-        console.log(`updated list after adding tasks : ${todo.join(", ")}`);
-        console.log();
+//         console.log(`updated list after adding task/tasks : ${todo.join(", ")}`);
+//         console.log();
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
-
-
-    }
-
-    else if (req == "remove") {
-
-        let deleteTask = prompt("Task/Tasks you want to delete : ");
-        deleteTask = deleteTask.split(" ")
-
-        console.log(`the tasks you want to delet : ${deleteTask.join(", ")} `);
-
-        deleteTask.forEach((task) => {
-            if (!todo.includes(task)) {
-                console.log(`the task : "${task}" you want to delete is not in the list.`);
-            }
-        })
-
-        todo = todo.filter(task => !deleteTask.includes(task));
-        console.log(`updated list : ${todo.join(", ")}`);
-        console.log();
-
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
 
 
-    }
+//     }
 
-    else if (req == "oglist") {
-        console.log(`The original list : ${oglist.join(", ")}`);
+//     else if (req == "remove") {
 
-        req = prompt("Type list/ add/ remove/ oglist or quit:");
+//         let deleteTask = prompt("Task/Tasks you want to delete : ");
+//         deleteTask = deleteTask.split(" ")
 
-    }
+//         console.log(`the tasks you want to delet : ${deleteTask.join(", ")} `);
 
-    else {
-        req = prompt(`Invalid command, please Type list/ add/ remove/ oglist or quit:`);
-    }
+//         deleteTask.forEach((task) => {
+//             if (!todo.includes(task)) {
+//                 console.log(`the task : "${task}" you want to delete is not in the list.`);
+//             }
+//         })
 
-}
+//         todo = todo.filter(task => !deleteTask.includes(task));
+//         console.log(`updated list after removing task/tasks: ${todo.join(", ")}`);
+//         console.log();
+
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
+
+
+//     }
+
+//     else if (req == "oglist") {
+//         console.log(`The original list : ${oglist.join(", ")}`);
+
+//         req = prompt("Type list/ add/ remove/ oglist or quit:");
+
+//     }
+
+//     else {
+//         req = prompt(`Invalid command, please Type list/ add/ remove/ oglist or quit:`);
+//     }
+
+// }
