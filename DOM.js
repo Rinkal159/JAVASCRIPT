@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 function popTheText(event) {
     event.preventDefault(); 
 
     let username = document.getElementById("username").value;
     document.getElementById("greet").innerHTML = "hello, " + username;
 }
-=======
 // function preventSubmit(event) {
 //     event.preventDefault();
 
@@ -38,4 +36,3 @@ function popTheText(event) {
 
 // let list = document.getElementsByTagName("li")
 // let alllist = document.querySelectorAll("Li")
->>>>>>> 600d6a686399ed30c47c0a0d84d1d737b3acfacd
