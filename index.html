@@ -5,9 +5,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .changeColor {
+            color: red;
+            background-color: yellow;
+            padding: 0.5rem;
+            margin: 0.2rem;
+        }
+    </style>
+
+
+    <!-- <style>
+        .container {
+            transition: color 0.1s linear, background-color 1s linear ;
+        }
+        .darkmode {
+            color: white;
+            background-color: #212121;
+        }
+    </style> -->
+
+    
 </head>
+
 <body>
-    <script src="script.js"></script>
+
+    <div class="container" id="parent">
+        <h1 id="child">VIRAT KOHLI</h1>
+    </div>
+
+    <script>
+        // let newimg = document.createElement("img");
+        // newimg.src = "https://wallpapercave.com/wp/wp3978060.jpg";
+        // newimg.style.width = "500px"
+        // let container = document.querySelector(".container");
+        // container.appendChild(newimg);
+
+        let child = document.querySelector("#child")
+        console.log(child.parentNode());
+        
+    </script>
+
+    <!-- <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>U
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <button onclick="changecolor()">click me</button>
+
+
+    <script>
+
+        function changecolor() {
+            const allh2 = document.querySelectorAll("h2");
+
+            allh2.forEach((h2) => {
+                h2.classList.toggle("changeColor");
+            })
+        }
+
+    </script> -->
+
+
+
+
+    <!-- <div class="container" id="container">
+        <h1>HEADING</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iste tempore consequuntur quam a eveniet eos libero quaerat unde iusto, distinctio possimus perspiciatis necessitatibus quo et laborum, alias est hic impedit perferendis. Totam hic deleniti harum! Recusandae vel qui perspiciatis tenetur, provident autem dolorem dolor fugit blanditiis in eos aut?</p>
+    </div>
+    <button onclick="changeColor()">click me</button>
+
+    <script>
+        function changeColor() {
+            let container = document.querySelector("#container")
+            container.classList.toggle("darkmode");
+
+        }
+    </script> -->
+
+
+
+
+
+    <!-- <input type="text" name="Search" id="search" placeholder="enter fruits you want" onkeyup="showOutput()">
+
+    <ul id="fruits">
+        <li>apple</li>
+        <li>cherry</li>
+        <li>bannana</li>
+        <li>grapes</li>
+        <li>watermalon</li>
+    </ul>
+
+
+    <script>
+        function showOutput() {
+            let input = document.querySelector("#search").value.toLowerCase();
+            let fruits = document.querySelectorAll("#fruits li");
+
+
+            fruits.forEach((item) => {
+                if (item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            })
+        }
+    </script> -->
+
+    <!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
 </body>
 
 </html>

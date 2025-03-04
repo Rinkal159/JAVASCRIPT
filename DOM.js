@@ -1,9 +1,13 @@
-function popTheText(event) {
-    event.preventDefault(); 
+// function popTheText(event) {
+//     event.preventDefault(); 
 
-    let username = document.getElementById("username").value;
-    document.getElementById("greet").innerHTML = "hello, " + username;
-}
+//     let username = document.getElementById("username").value;
+//     document.getElementById("greet").innerHTML = "hello, " + username;
+// }
+
+
+
+
 // function preventSubmit(event) {
 //     event.preventDefault();
 
@@ -33,6 +37,3 @@ function popTheText(event) {
 
 
 
-
-// let list = document.getElementsByTagName("li")
-// let alllist = document.querySelectorAll("Li")
