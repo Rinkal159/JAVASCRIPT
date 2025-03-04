@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color</title>
+
+    <style>
+        .changeColor {
+            color: red;
+            background-color: yellow;
+            padding: 0.5rem;
+            margin: 0.2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>U
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <h2>1</h2>
+    <button onclick="changecolor()">click me</button>
+
+</body>
+
+<script>
+
+    function changecolor() {
+        const allh2 = document.querySelectorAll("h2");
+
+        allh2.forEach((h2) => {
+            h2.classList.toggle("changeColor");
+        })
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding element</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>VIRAT KOHLI</h1>
+    </div>
+</body>
+
+<script>
+    let newimg = document.createElement("img");
+    newimg.src = "https://wallpapercave.com/wp/wp3978060.jpg";
+    newimg.style.width = "500px"
+    let container = document.querySelector(".container");
+    container.appendChild(newimg);
+</script>
+
+</html>

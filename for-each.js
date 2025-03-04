@@ -10,7 +10,7 @@
     ]
 
     arr.forEach((nums) => {
-        //     console.log(nums.join(" "));
+            // console.log(nums.join(" "));
     })
 }
 

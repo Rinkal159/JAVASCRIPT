@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle theme</title>
+
+    <style>
+        .container {
+            transition: color 0.1s linear, background-color 1s linear;
+        }
+
+        .darkmode {
+            color: white;
+            background-color: #212121;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <h1>HEADING</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iste tempore consequuntur quam a eveniet
+            eos libero quaerat unde iusto, distinctio possimus perspiciatis necessitatibus quo et laborum, alias est hic
+            impedit perferendis. Totam hic deleniti harum! Recusandae vel qui perspiciatis tenetur, provident autem
+            dolorem dolor fugit blanditiis in eos aut?</p>
+    </div>
+    <button onclick="changeColor()">click me</button>
+</body>
+
+<script>
+    function changeColor() {
+        let container = document.querySelector("#container")
+        container.classList.toggle("darkmode");
+
+    }
+</script>
+
+</html>
