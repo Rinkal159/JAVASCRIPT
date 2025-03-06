@@ -7,18 +7,123 @@
     <title>Adding element</title>
 </head>
 
+<style>
+    .applystyle {
+        color: red;
+        background-color: yellow;
+        border: none;
+        box-shadow: 0 0 0 1px red;
+    }
+</style>
+
 <body>
-    <div class="container">
-        <h1>VIRAT KOHLI</h1>
-    </div>
+    <!-- <div class="container">
+        <h1 id="h1">VIRAT KOHLI</h1>
+    </div> -->
+
+    <!-- <ul id="language">
+        <li>js</li>
+    </ul> -->
 </body>
 
 <script>
-    let newimg = document.createElement("img");
-    newimg.src = "https://wallpapercave.com/wp/wp3978060.jpg";
-    newimg.style.width = "500px"
-    let container = document.querySelector(".container");
-    container.appendChild(newimg);
+
+    // // create an element "img"
+
+    // let newimg = document.createElement("img");
+    // newimg.src = "https://wallpapercave.com/wp/wp3978060.jpg";
+    // newimg.style.width = "500px"
+    // let container = document.querySelector(".container");
+    // container.appendChild(newimg);
+
+
+    // -----------------------------------------------------------------------------------------------------------------------------------
+
+
+    // create an element "button" and setAttribute
+
+    // let btn = document.createElement("button")
+    // btn.innerText = "click here";
+
+    // // creating id is possible by dot dotation
+    // btn.id = "mybtn"
+    // btn.className = "mystr"
+    // btn.setAttribute("class", "mystr2");
+    // btn.setAttribute("class", "mystr3");
+
+    // // this 👇 will automatically set a class called "applystyle"
+    // btn.classList.add("applystyle")
+    // // but it will not override the "myatr" class, instead btn has two classes now- "myatr" and "applystyel"
+
+    // btn.onclick = clickme;
+    // function clickme() {
+    //     alert("big VIRAT fan!")
+    // }
+    // document.querySelector(".container").appendChild(btn)
+
+    // console.log(btn);
+
+
+    // -----------------------------------------------------------------------------------------------------------------------------------
+
+
+    // createAttribute
+
+    // let btn = document.createElement("button");
+    // btn.innerText = "Click Me";
+
+    // let attr = document.createAttribute("id");
+    // attr.value = "myButton";
+
+    // btn.setAttributeNode(attr);
+    // document.body.appendChild(btn);
+
+
+    // -----------------------------------------------------------------------------------------------------------------------------------
+
+    // adding additional values
+
+    const lang = ["java", "python", "ruby", "go"]
+
+    function addLanguages(name) {
+        // const li = document.createElement("li");
+        // li.innerText = name;
+
+        // document.querySelector("#language").appendChild(li)
+
+        name.forEach(value => {
+            const li = document.createElement("li");
+            li.innerText = value;
+
+            document.querySelector("#language").appendChild(li)
+        });
+
+    }
+
+    addLanguages(lang)
+
+    function replace(lang) {
+        const oldel = document.querySelector("li:first-child");
+        const newel = document.createElement("li");
+        newel.appendChild(document.createTextNode(lang))
+
+        oldel.replaceWith(newel);
+        newel.appendChild(document.createTextNode("++"))
+        // newel.innerText = "++"
+
+
+    }
+
+    replace("c")
+
+    // addLanguages("java")
+    // addLanguages("python")
+    // addLanguages("php")
+    // addLanguages("go")
+    // addLanguages("rust")
+
+
+
 </script>
 
 </html>
