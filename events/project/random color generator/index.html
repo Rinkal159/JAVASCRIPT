@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color generator</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .info {
+            transform: scale(1.05);
+            transition: 0.4s linear;
+        }
+        #btn {
+            padding: 0.5rem;
+            border: none;
+            box-shadow: 0 0 0 1px black;
+            margin-bottom: 5vh;
+
+        }
+        #btn:hover {
+            background-color: #e8e8e8;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #btn:active {
+            background-color: #dbdbdb;
+        }
+
+        .color {
+            background-color: rgb(random, green, blue);
+        }
+
+        .box {
+            height: 300px;
+            width: 800px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="info">rgb(0, 0, 0)</p>
+        <button id="btn">Generate color</button>
+        <div class="box" id="box"></div>
+    </div>
+
+</body>
+
+<script>
+    const max = 255;
+
+    // let r, b, g;
+    // for(let i=1; i<=3; i++) {
+    //     random = Math.floor(Math.random() * max+1)    
+    //     if(i===1) {
+    //         r = random
+    //     }
+    //     if(i===2) {
+    //         g = random
+    //     }
+    //     if(i===3) {
+    //         b = random
+    //     }
+    // }
+    // console.log(`rgb(${r}, ${g}, ${b})`);
+
+    const box = document.querySelector("#box");
+
+    document.querySelector("#btn").addEventListener("click", (event) => {
+
+        const r = Math.floor(Math.random() * (max + 1))
+        const g = Math.floor(Math.random() * (max + 1))
+        const b = Math.floor(Math.random() * (max + 1))
+
+        const inf = document.querySelector("#info")
+        info.innerText = `rgb(${r}, ${g}, ${b})`;
+        info.classList.add("info")
+
+        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    })
+</script>
+
+</html>

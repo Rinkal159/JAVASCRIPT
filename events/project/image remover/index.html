@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removing images</title>
+
+    <style>
+        img {
+            width: 200px;
+            margin: 1rem;
+            cursor: pointer;
+        }
+        .container {
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+        }
+        .display {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="mountain1.jpg" alt="mountain">
+        <img src="ocean.jpg" alt="ocean">
+    </div>
+</body>
+
+<script>
+    document.querySelector(".container").addEventListener("click", (event) => {
+        const curr = event.target;
+
+        if(curr.tagName === "IMG") {
+            curr.classList.toggle("display");
+        }
+        
+    })
+</script>
+
+</html>

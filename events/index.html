@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #box {
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+        }
+
+        #btn {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+        } */
+
+        /* --------------------------------------------------------------------- */
+
+        /* .container {
+            cursor: default;
+        }
+        .color {
+            background-color: yellow;
+        } */
+
+        /* --------------------------------------------------------------------- */
+
+        /* .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 200px;
+
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 100px;
+            
+        }
+        #p {
+            border: 1px solid black;
+            height: 30px;
+            width: 100%;
+        }
+        ::placeholder {
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="container">
+        <div id="box">
+            <button id="btn">button1</button>
+            <button id="btn">button2</button>
+            <button id="btn">button3</button>
+        </div>
+    </div>
+    <div style="height: 1000vh;"></div> -->
+
+    <!-- ---------------------------------------------------------------------  -->
+
+    <!-- <div id="gparent" style="width:300px; height:300px; background:green;">
+        <div id="parent" style="width:200px; height:200px; background:red;">
+            <div id="child" style="width:100px; height:100px; background:blue;"></div>
+        </div>
+    </div> -->
+
+    <!-- ---------------------------------------------------------------------  -->
+
+    <!-- <div class="container">
+        <h1>heading</h1>
+        <h2>headin2</h2>
+        <h3>headin3</h3>
+        <p>paragraph</p>
+    </div> -->
+
+    <!-- ---------------------------------------------------------------------  -->
+
+    <!-- <div class="container">
+        <input id="p" placeholder="press ⬆️, ⬇️, ⬅️ or ➡️ key" autofocus></input>
+        <div id="box"></div>
+    </div> -->
+
+    <!-- ---------------------------------------------------------------------  -->
+
+    <form id="form" action="">
+        <input type="text" id="un" placeholder="username">
+        <input type="password" id="pw" placeholder="password">
+        <button>submit</button>
+    </form>
+    
+
+</body>
+
+<script>
+    // document.querySelector("#btn").addEventListener("click", (event) => {
+    //     console.log(event.timeStamp);
+
+    // })
+
+    // ---------------------------------------------------------------------------
+
+
+
+    // console.log(Date.now()); timestamp
+    // const a = new Date();
+    // console.log(a); date
+
+    // document.querySelector("#box").addEventListener("click", (event) => {
+    //     console.log(event.target);
+    //     console.log(event.currentTarget);
+
+    // })
+
+    // ---------------------------------------------------------------------------
+
+    // document.addEventListener("mouseup", (event) => {
+    //     console.log(`clientX : ${event.clientX} and clientY : ${event.clientY}`);
+
+    // })
+    // document.addEventListener("mouseup", (event) => {
+    //     console.log(`pageX : ${event.pageX} and pageY : ${event.pageY}`);
+
+    // })
+
+    // ---------------------------------------------------------------------------
+
+    // document.getElementById("gparent").addEventListener("mouseout", () => {
+    //     console.log("Mouse left parent or its child!");
+    // });
+
+    // document.getElementById("gparent").addEventListener("mouseleave", () => {
+    //     console.log("Mouse left only the parent!");
+    // });
+
+    // ---------------------------------------------------------------------------
+
+    // document.querySelector(".container").addEventListener("click", (event) => {
+
+    //     if (event.target !== event.currentTarget) {
+    //         event.target.classList.toggle("color");
+    //     }
+    // })
+
+    // ---------------------------------------------------------------------------
+
+    // document.querySelector("#p").addEventListener("keyup", (event) => {
+    //     const box = document.querySelector("#box")
+    //     if(event.key === "ArrowUp") {
+    //         box.style.top = "30px";
+    //     }
+    //     if(event.key === "ArrowDown") {
+    //         box.style.top = "130px";
+    //     }
+    //     if(event.key === "ArrowLeft") {
+    //         box.style.left = "0";
+    //     }
+    //     if(event.key === "ArrowRight") {
+    //         box.style.left = "100px";
+    //     }
+        
+    // })
+
+    // ---------------------------------------------------------------------------
+
+    document.querySelector("#form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let username = document.querySelector("#un").value;
+        let password = document.querySelector("#pw").value;
+
+        let print = document.createElement("P")
+        print.innerText = `welcome ${username}, your password is ${password} `
+        document.body.appendChild(print)
+    })
+
+
+</script>
+
+</html>
