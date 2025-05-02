@@ -20,13 +20,25 @@
     // console.log(sum());
 }
 
+
+
+let a = 13;
+{
+    let a = 10;
+    console.log(a);
+    
+}
+
+
+
+
 {
     const a = 10;
     const b = 11;
 
     function outer() {
         const a = 12;
-        // const b = 13;
+        const b = 13;
 
         // console.log(`outer sum : ${a + b}`);
 
@@ -45,8 +57,6 @@
 }
 
 {
-    var localVar = "i am global"
-
     function localExample() {
         var localVar = "I am local!";
         // console.log(localVar); // ✅ Accessible inside
@@ -85,7 +95,7 @@
 }
 
 {
-    function outer() {
+    const iife = (function() {
         let count = 0;
 
         return function inner() {
@@ -93,14 +103,30 @@
             // console.log(count);
 
         }
+    })()();
+
+    // iife();
+    // iife();
+    // iife();
+
+    // -------------------------------------
+
+    function outer() {
+        let count = 0;
+
+        return function inner() {
+            count++;
+            // console.log(count);
+            
+        }
     }
 
-    const counter = outer();
-    counter();
-    counter();
-    counter();
-    counter();
-    counter();
+    // const counter = outer();
+    // counter();
+    // counter();
+    // counter();
+    // counter();
+    // counter();
 }
 
 
@@ -114,12 +140,13 @@
             const sum = arr.reduce((acc, value) => acc + value, 0);
             // console.log(`sum is ${sum}`);
 
+            // console.log(`product is ${inInInner()}`);
+            
             function inInInner() {
                 const multy = arr.reduce((acc, value) => acc * value, 1)
                 return multy;
             }
 
-            // console.log(`product is ${inInInner()}`);
 
         }
     }
@@ -130,12 +157,12 @@
 {
     function outer() {
         function inner() {
-            // console.log(x);
-            // console.log(y);
+            console.log(x);
+            console.log(y);
 
         }
-        let x = 3;
-        let y = 4;
+        // let x = 3;
+        // let y = 4;
 
         inner();
     }

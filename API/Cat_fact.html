@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat fact API</title>
+</head>
+
+<body>
+    <h1 class="heading">RANDOM CAT FACTS</h1>
+    <button class="btn">ClickMe</button>
+    <p class="fact"></p>
+
+    <script>
+        const factURL = "https://catfact.ninja/fact";
+
+        const btn = document.querySelector(".btn");
+        const fact = document.querySelector(".fact")
+
+        btn.addEventListener("click", () => {
+            fetch(factURL)
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error(`error : ${res.status}`)
+                    }
+                    return res.json();
+                })
+                .then((data) => {
+                    fact.innerText = data.fact;
+
+                })
+                .catch((err) => {
+                    console.log(err);
+
+                })
+        })
+    </script>
+</body>
+
+</html>

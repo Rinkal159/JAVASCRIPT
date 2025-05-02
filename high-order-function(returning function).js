@@ -5,11 +5,12 @@
     let x = 14;
     let y = 12;
 
-    const IIFE = ((a, b) => {
+    ((a, b) => {
         return () => {
-            return a+ b;
+            console.log(a+b);
+            
         }
-    })(x, y)
+    })(x, y)();
 
     // console.log(IIFE());
 }
@@ -29,8 +30,8 @@
         }
     })(x, y)
 
-    IIFE.adding()
-    IIFE.substracting()
-    IIFE.multiplicating()
-    IIFE.dividing()
+    // IIFE.adding()
+    // IIFE.substracting()
+    // IIFE.multiplicating()
+    // IIFE.dividing()
 }

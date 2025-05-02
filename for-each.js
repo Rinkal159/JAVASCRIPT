@@ -14,6 +14,8 @@
     })
 }
 
+
+
 {
     const numbers = [1, 2, 3, 4, 5];
 
@@ -66,12 +68,3 @@
 }
 
 
-{
-    const prices = [100, 200, 300];
-
-    prices.forEach((price, i, arr) => {
-    arr[i] = price * 10;  // Apply 10% discount
-    });
-
-    // console.log(prices);  // [90, 180, 270]
-}

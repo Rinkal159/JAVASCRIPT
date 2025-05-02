@@ -7,11 +7,11 @@
     for (let num of arr) {
         if (Array.isArray(num)) {  // Check if it's an array before looping
             for (let nested of num) {
-                // console.log(nested);
+                console.log(nested);
             }
         }
          else {
-            // console.log(num);  // Print number directly
+            console.log(num);  // Print number directly
         }
     }
 

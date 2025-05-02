@@ -4,35 +4,35 @@
 {
   // const print = () => console.log(`print`);
 
-  print();
+  // print();
 }
 
 {
   // prompt with arrow function
 
-  let num = prompt("The numbers you want to sum");
-  num = num.split(" ");
+  // let num = prompt("The numbers you want to sum");
+  // num = num.split(" ");
 
-  const average = (input) => {
-    const reduceVar = input.reduce((acc, value, index, arr) => {
+  // const average = (input) => {
+  //   const reduceVar = input.reduce((acc, value, index, arr) => {
 
-      acc += Number(value);
-      const av = acc / arr.length;
-      return index === arr.length - 1 ? av.toFixed(2) : acc;
-    }, 0);
+  //     acc += Number(value);
+  //     const av = acc / arr.length;
+  //     return index === arr.length - 1 ? av.toFixed(2) : acc;
+  //   }, 0);
 
-    return reduceVar;
+  //   return reduceVar;
 
-    // console.log(average(num));
+  //   // console.log(average(num));
 
-    const sum = (input) => {
-      const reduceVar = input.reduce((acc, value) => acc + Number(value), 0);
+  //   const sum = (input) => {
+  //     const reduceVar = input.reduce((acc, value) => acc + Number(value), 0);
 
-      return reduceVar;
-    }
+  //     return reduceVar;
+  //   }
 
-    // console.log(sum(num));
-  }
+  //   // console.log(sum(num));
+  // }
 }
 
 
@@ -47,7 +47,7 @@
     },
 
     printObj: function () {
-      // console.log(this)
+      console.log(this)
 
     }
 
@@ -56,18 +56,11 @@
   obj.printObj()
   obj.age = 18;
   obj.printObj()
-  obj.printInfo(obj)
-
-  const demo = function () {
-    const a = 13;
-    console.log(this);
-
-  }
+  // obj.printInfo(obj)
 
 }
 
 {
-  demo()
 
   const demo2 = () => {
     const a = 13;
@@ -88,16 +81,16 @@
 
     age: 18,
 
-    // printInfo : function({fname, lname}) {
-    //     // console.log(`first name is ${fname} and last name is ${lname}`);
-
-    // }
-
-    printInfo: ({ username, name: { fname } }) => {
-      // console.log(`usename is ${username} and fname is ${fname}`);
+    printInfo : function({name : {fname, lname}}) {
+        console.log(`first name is ${fname} and last name is ${lname}`);
 
     }
+
+    // printInfo: ({ username, name: { fname } }) => {
+    //   console.log(`usename is ${username} and fname is ${fname}`);
+
+    // }
   }
 
-  obj.printInfo(obj)
+  obj.printInfo(obj);
 }

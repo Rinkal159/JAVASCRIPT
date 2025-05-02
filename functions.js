@@ -14,7 +14,7 @@
 {
     // not hoisted
 
-    print()
+    // print()
 
     let print = function () {
         console.log(`print`);
@@ -135,18 +135,18 @@
 }
 
 {
-    let nums = prompt("numbers");
-    nums = nums.split(" ");
+    // let nums = prompt("numbers");
+    // nums = nums.split(" ");
 
-    function average() {
-        let sum = 0;
+    // function average() {
+    //     let sum = 0;
 
-        nums.forEach(num => sum += Number(num))
-        // console.log(` the average is ${sum/ nums.length}`);
+    //     // nums.forEach(num => sum += Number(num))
+    //     // console.log(` the average is ${sum/ nums.length}`);
 
-    }
+    // }
 
-    average()
+    // average()
 }
 
 {
@@ -182,7 +182,7 @@
 {
     function returnValues(val1, val2, ...products) {
 
-        return [val1, val2, products.join(" , ")];
+        return [val1, val2, products.join(",")];
     }
 
     // console.log(`the products : ${returnValues("soap", "waternbottle", "makeup", "chocolate", "biscuits")}`);

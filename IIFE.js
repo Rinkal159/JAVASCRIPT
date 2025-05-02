@@ -4,13 +4,23 @@
     for (let i = 0; i <= 3; i++) {
 
     // const print = () => console.log(`hello world! ${i}`);
-    print();
+    // print();
 
     (function() {
         // console.log(`hellow world! : ${i}`);
 
     })();
     }
+}
+
+
+{
+    function sum(a, b) {
+        return a+b;
+    }
+    let sumthis = sum(10, 10);
+    sumthis;
+
 }
 {
     const a = 12;
@@ -26,46 +36,46 @@
 }
 
 {
-    const root = 12;
-    const a = root;
+    // const root = 12;
+    // const a = root;
 
-    const IIFE = ((x) => {
-        return {
-            // value : () => console.log( `Root value : ${root}`),
-            // increment : () => console.log(`Increment : ${++x}`),
-            // decrement : () => console.log(`Decrement : ${--x}`)        
-        }
-    })(a)
+    // const IIFE = ((x) => {
+    //     return {
+    //         // value : () => console.log( `Root value : ${root}`),
+    //         // increment : () => console.log(`Increment : ${++x}`),
+    //         // decrement : () => console.log(`Decrement : ${--x}`)        
+    //     }
+    // })(a)
 
-    IIFE.value()
-    IIFE.increment()
-    IIFE.decrement()
-    IIFE.increment()
-    IIFE.increment()
-    IIFE.increment()
-    IIFE.value() 
+    // IIFE.value()
+    // IIFE.increment()
+    // IIFE.decrement()
+    // IIFE.increment()
+    // IIFE.increment()
+    // IIFE.increment()
+    // IIFE.value() 
 
 }
 
 {
-    let root = 0;
-    let a = root;
+    // let root = 0;
+    // let a = root;
 
-    const returnInfo =  (x) => {
+    // const returnInfo =  (x) => {
 
 
-        return {
-            // value: () => console.log(`Root value : ${root}`),
-            // increment: () => console.log(`Increment : ${++x}`),
-            // decrement: () => console.log(`Decrement : ${--x}`)
-        }
-    }
+    //     return {
+    //         // value: () => console.log(`Root value : ${root}`),
+    //         // increment: () => console.log(`Increment : ${++x}`),
+    //         // decrement: () => console.log(`Decrement : ${--x}`)
+    //     }
+    // }
 
-    const handler = returnInfo(a);
-    handler.value()
-    handler.increment()
-    handler.decrement()
-    handler.value()
+    // const handler = returnInfo(a);
+    // handler.value()
+    // handler.increment()
+    // handler.decrement()
+    // handler.value()
 }
 
 
@@ -76,7 +86,7 @@
         return a+b;
     })( 5)
 
-    // console.log(IIFE);
+    console.log(IIFE);
 }
 
 

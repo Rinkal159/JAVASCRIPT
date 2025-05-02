@@ -35,13 +35,13 @@
         name: "tizer",
         species: "dog",
         intro() {
-            // console.log(`hello, my name is ${this.name} and my age is ${this.age} and my food is ${this.food}`);
+            console.log(`hello, my name is ${this.name} and my age is ${this.age} and my food is ${this.food}`);
         }
     }
 
     Object.defineProperty(animal, "name", {
-        writable : true,
-        configurable : false
+        writable: true,
+        configurable: false
     })
 
     animal.name = "olive"
@@ -49,6 +49,10 @@
     // console.log(animal);
 
     const pet = Object.create(animal, {
+        name : {
+            value : "simran"
+        },
+
         age: {
             value: 14,
             writable: false
@@ -59,24 +63,29 @@
         }
     });
 
+    // console.log(animal);
+    pet.species = "cat";
+    // console.log(pet);
+
+
+
     // ☝️ the better option for defineproperty when the object inherites from other object
 
     Object.defineProperty(pet, "age", {
-        value : 14,
-        writable : false
+        value: 14,
+        writable: false
     })
 
     // pet.intro();
-
-    pet.species = "cat";
+    
 
     // console.log(pet.species);
     // console.log(animal.species);
 
-    for(key in pet) {
-        if(pet.hasOwnProperty(key)) {
+    for (key in pet) {
+        if (pet.hasOwnProperty(key)) {
             // console.log(`key : ${key}`);       
-        }   
+        }
     }
 
 }
@@ -93,9 +102,13 @@
     // console.log(Object.assign({}, ob1, ob2));
 
 
-    Object.defineProperty(ob1, "age", {
-        value: 17,
-    });
+    // Object.defineProperty(ob1, "age", {
+    //     value: 17,
+    // });     will not add age key in the ob1 object
+
+    // console.log(ob1);
+
+    // ob1.age = 17;      will add age key in the ob1 object
 
     // console.log(ob1);
     // console.log(ob1.age);
@@ -125,10 +138,10 @@
 
 {
     const obj = {
-        1 : "a",
-        2 : "b",
-        true : "c",
-        null : "d"
+        1: "a",
+        2: "b",
+        true: "c",
+        null: "d"
     }
 
     // console.log(obj.true);
@@ -158,7 +171,7 @@
 
     arrOfObjects.forEach(obj => obj.age = 17)
 
-    arrOfObjects.forEach(({name, age = 'not defined'}) => {
+    arrOfObjects.forEach(({ name, age = 'not defined' }) => {
         // console.log(`name is ${name} and age is ${age}`);
 
     })

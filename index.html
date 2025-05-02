@@ -6,7 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h1>COLOR CHANGER</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
 </body>
+
+<script>
+    function color() {
+        const min = 0;
+        const max = 255;
+
+        let random1 = Math.floor(Math.random()*max-min+1)
+        let random2 = Math.floor(Math.random()*max-min+1)
+        let random3 = Math.floor(Math.random()*max-min+1)
+        document.body.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`
+
+    }
+    let start;
+
+    document.querySelector("#start").addEventListener("click", () => {
+        start = setInterval(color, 1000);
+    })
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        console.log("stopped");
+        document.body.style.backgroundColor = "white"
+        clearInterval(start);
+        start = null;
+    })
+
+</script>
+
 </html>

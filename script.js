@@ -15,7 +15,9 @@
 // const b = "hello";
 // const c = a + b;
 // console.log(c);
-// console.log(typeof(c));
+// console.log(typeof (c));
+
+
 
 
 // console.log( "2" + (2 + 2) + 3);
@@ -33,6 +35,7 @@
 // console.log("hello2"> "Hello");
 
 
+
 // let c = 3;
 // const d = ++c;
 // console.log(`the value of c is ${c} and d is ${d}`);
@@ -43,7 +46,6 @@
 
 // console.log("1" > 0 );
 // console.log(null > 0);
-
 // console.log(null >= 0);
 
 // console.log(undefined == 0);
@@ -55,9 +57,12 @@
 
 // const str = new String("rinkal");
 // console.log(str.slice(-5, -3 ));
+// console.log(str);
+
+
 
 // const str = "hello world"
-// console.log(str.split(""));
+// console.log(str.split(" "));
 
 // console.log(`hello \"world!\"`);
 
@@ -89,34 +94,32 @@
 // console.log(Math.sqrt(a));
 // console.log(Math.cbrt(a));
 
+// let date = new Date();
+// console.log(date.toString());
 
 
-// { finding current age
+{
+    // finding current age
+
+    // const bornDate = new Date(2007, 4, 1);
+    // const todayDate = new Date();
+
+    // let age = todayDate.getFullYear() - bornDate.getFullYear();
+
+    // const monthDiff = todayDate.getMonth() - bornDate.getMonth();
+    // const dateDiff = todayDate.getDate() - bornDate.getDate();
 
 
+    // if (monthDiff < 0 || ( monthDiff===0 && dateDiff < 0)) {
+    //     age--;
+    // }
 
-// const bornDate = new Date(2007, 1, 1);
-// const todayDate = new Date();
-
-// let age = todayDate.getFullYear() - bornDate.getFullYear();
-
-// const monthDiff = todayDate.getMonth() - bornDate.getMonth();
-// const dateDiff = todayDate.getDate() - bornDate.getDate();
-
-
-// if (monthDiff < 0 || ( monthDiff===0 && dateDiff < 0)) {
-//     age--;
-// }
-
-// console.log(`age : ${age}`);
-
-
-
-// }
+    // console.log(`age : ${age}`);
+}
 
 
 // let timeStamp = new Date(1738659349450);
-// console.log(timeStamp.toString());
+// console.log(timeStamp);
 
 
 // for(let i =1; i<=10; i++) {
@@ -137,25 +140,30 @@
 // const numbers = [
 //     "hello",
 //     2,
-//     33
-// "hello",
-// "hi",
-// "namaste",
-// "pranam",
-// true,
-// false,
-// true
+//     33,
+//     "hello",
+//     "hi",
+//     "namaste",
+//     "pranam",
+//     true,
+//     false,
+//     true
 // ];
 
 // console.log(numbers[0][3]); // 'l'
 
 // console.log(numbers.lastIndexOf(true));
-// console.log(numbers.join(" "));
+// console.log(numbers.join(" , "));
 // console.log(numbers.toString());
 
 
 
-// const newNumbers = [4,5,6]
+// const newNumbers = [4,5,6];
+// console.log(newNumbers.splice(0, 2, 2));
+// console.log(newNumbers
+// );
+
+
 // const mergeNumbers = [0, ...numbers, ...newNumbers, 7]
 // console.log(mergeNumbers);
 
@@ -204,16 +212,16 @@
 
 {
     // let isLoggedIn = false;
-    // console.log((isLoggedIn=== true && "Welcome! user") || "Please Log yourself");
-    
+    // console.log((isLoggedIn === true && "Welcome! user") || "Please Log yourself");
+
 }
 
 {
     let arr = [1, 2, 3, 4, 5];
 
     for (const num of arr) {
-        console.log(num);
-        
+        // console.log(num);
+
     }
 
     const obj = {
@@ -222,8 +230,8 @@
     }
 
     for (const key in obj) {
-        console.log(`key is ${key} and its value is ${obj[key]}`);
-        
+        // console.log(`key is ${key} and its value is ${obj[key]}`);
+
     }
 }
 
@@ -232,8 +240,8 @@
 // FOR EACH
 // --------------------------------------------------------------------------------------------------------------------------------------
 
-let arr = [1, 2, 3, 4, 5];
-arr.forEach((value) => console.log(value));
+// let arr = [1, 2, 3, 4, 5];
+// arr.forEach((value) => console.log(value));
 
 {
 
@@ -503,6 +511,7 @@ arr.forEach((value) => console.log(value));
     //     name: "rinkal"
     // }
     // const ob2 = {
+    //     name:"krina",
     //     age: 14
     // }
 
@@ -602,14 +611,17 @@ arr.forEach((value) => console.log(value));
 
 // let print = function() {
 //     console.log(`print`);
-
 // }
 
 // variable is hoisted but TDZ(temporal declaration zone) applies 
 
-// let a;
+let a;
 // console.log(a);
-// a = 5;
+a = 5;
+
+// console.log(a);
+// var a = 5;
+
 
 {
     // function one() {
@@ -659,17 +671,16 @@ arr.forEach((value) => console.log(value));
 }
 
 {
-    // const obj = {
-    //     first: 13,
-    //     second: 18,
-    //     sum() {
-    //         const { first, second } = obj
-    //         return first + second;
-    //     }
-    // }
+    const obj = {
+        first: 13,
+        second: 18,
+        sum({ first, second }) {
+            return first + second;
+        }
+    }
 
-    // const { sum } = obj;
-    // console.log(`sum is ${sum()}`);
+    const { sum } = obj;
+    // console.log(`sum is ${sum(obj)}`);
 
 
     // destructuring in for-in loop
@@ -706,9 +717,9 @@ arr.forEach((value) => console.log(value));
 
 
 
+    // reduce method 👇
 
     // const sumOfMarks = students.reduce((acc, {marks}) => acc + marks ,0);
-
     // console.log(sumOfMarks);
 
 
@@ -747,17 +758,17 @@ arr.forEach((value) => console.log(value));
 }
 
 {
-    // function ave(...num) {
+    function ave(...num) {
 
-    //     const aveargeOfAll = num.reduce((acc, value,index,  arr) => {
-    //         acc += value;
-    //         return index === arr.length-1 ?  acc/ arr.length : acc
-    //     }, 0);
+        const aveargeOfAll = num.reduce((acc, value,index,  arr) => {
+            acc += value;
+            return index === arr.length-1 ?  acc/ arr.length : acc
+        }, 0);
 
-    //     return aveargeOfAll;
-    // }
+        return aveargeOfAll;
+    }
 
-    // console.log(`average of all digits is ${ave(1, 2, 3, 4, 5)}`);
+    console.log(`average of all digits is ${ave(1, 2, 3, 4, 5)}`);
 
 }
 {
@@ -799,9 +810,7 @@ arr.forEach((value) => console.log(value));
     // function getAllValues(...arr) {
 
     //     arr.forEach((value) => {
-    //         console.log(`the values are : ${value[2
-
-    //         ]}`);            
+    //         console.log(`the values are : ${value[2]}`);            
     //     })
     // }
 
@@ -1276,7 +1285,7 @@ arr.forEach((value) => console.log(value));
     // console.log(newArr);
 
 
-    
+
 
 
 }

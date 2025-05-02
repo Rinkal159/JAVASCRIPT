@@ -82,7 +82,7 @@
         return acc;
     }, {})
 
-    // console.log(Object.keys(grouping));
+    console.log(grouping);
 
 
 

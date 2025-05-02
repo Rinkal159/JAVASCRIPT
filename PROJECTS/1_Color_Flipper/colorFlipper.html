@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style>
+        .heading {
+            text-align: center;
+        }
+        .btn {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px black;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 1s ease-out;
+        }
+        .btn:hover {
+            background-color: rgb(212, 212, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Background Color Flipper</h1>
+        <button class="btn">Click me</button>
+    </div>
+
+
+    <script>
+        const btn = document.querySelector(".btn")
+
+        btn.addEventListener("click", () => {
+            const max = 255;
+            let random1 = Math.floor(Math.random()*max)
+            let random2 = Math.floor(Math.random()*max)
+            let random3 = Math.floor(Math.random()*max)
+
+            document.body.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`
+        })
+    </script>
+</body>
+
+</html>

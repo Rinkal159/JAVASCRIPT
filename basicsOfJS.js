@@ -3,7 +3,7 @@
 // const a = 12;
 // const b = 12;
 // console.log(a+b);
- 
+
 // const c = "33abc";
 // console.log(typeof(c));
 
@@ -174,6 +174,52 @@
     // }
     // console.log(maxNumber);
     // console.log(arr);
+
+
+}
+
+{
+    const people = [
+        { fname: "rinkal", lname: "singapuri", age: 17 },
+        { fname: "mahi", lname: "shah", age: 19 },
+        { fname: "devang", lname: "kapadia", age: 20 },
+        { fname: "maitraiyee", lname: "chutia", age: 19 },
+        { fname: "priyanshi", lname: "vanza", age: 18 },
+    ];
+
+    let arr = people.map((name) => name.fname + " " + name.lname)
+    // console.log(arr);
+
+    let arr2 = people.reduce((acc, name) => {
+        acc[name.age] = acc[name.age] || [];
+        acc[name.age].push(name.fname);
+        return acc;
+    }, {});
+
+    // console.log(arr2);
+
+
+    {
+        let arr3 = people.filter((name) => name.age > 17).map((name) => name.fname);
+        // console.log(arr3);
+
+
+
+        let arr4 = people.reduce((acc, name) => {
+            if (name.age > 17) {
+                acc.push(name.fname)
+            }
+            return acc;
+        }, [])
+        // console.log(arr4);
+    }
+
+
+
+
+
+
+
 
 
 }

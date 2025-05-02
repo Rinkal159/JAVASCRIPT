@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const url = "https://api.github.com/users/hiteshchaudhary";
+
+        axios.get(url)
+        .then((res) =>{
+            console.log(res);
+            return res.data;
+        })
+        .then((login) => {
+            console.log(login);
+            
+        })
+        .catch((err) => {
+            console.log(err);
+            
+        })
+    </script>
+</body>
+</html>

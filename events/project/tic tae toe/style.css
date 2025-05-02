@@ -17,10 +17,10 @@ body {
     border-top: 2px solid black;
     border-right: 2px solid black;
     border-collapse: collapse;
-
+/* 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .box:nth-child(1), .box:nth-child(2), .box:nth-child(3) {
     border-top: none;

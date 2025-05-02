@@ -2,6 +2,77 @@
 // --------------------------------------------------------------------------------------------------------------------------------------
 
 {
+    const max = 3;
+    const min = 1;
+
+    let random = Math.floor(Math.random() * (max - min + 1) + min);
+
+    function colorChecker() {
+        if (random === 1) {
+            console.log(`\"RED\" means \"STOP\"`);
+
+        } else if (random === 2) {
+            console.log(`\"GREEN\" means \"GO\"`);
+
+        } else {
+            console.log(`\"YELLOW\" means \"SLOW DOWN\"`);
+
+        }
+    }
+
+    // colorChecker()/;
+
+}
+
+{
+    // let size = prompt("The size of the popcorn").toLowerCase();
+
+    // if (size == "s") {
+    //     console.log(`price for popcorn is 100`);
+
+    // } else if (size == "m") {
+    //     console.log(`price for popcorn is 200`);
+
+    // } else if (size == "l") {
+    //     console.log(`price for popcorn is 300`);
+
+    // } else if (size == "xl") {
+    //     console.log(`price for popcorn is 400`);
+
+    // }
+}
+{
+    function chewckReminder(a, b) {
+        if (a % 10 == b % 10) {
+            console.log("have same last digit");
+
+        } else {
+            console.log("have different last digits");
+
+        }
+    }
+    // chewckReminder(33, 63);
+}
+
+{
+    let str = "";
+    if (str) {
+        // console.log("non-empty string");
+
+    } else {
+        // console.log("empty string");
+
+    }
+}
+{
+    let a;
+    console.log(a);
+    a = 13;
+    
+}
+
+
+{
     const str = "412";
     const conversion = Boolean(str);
 

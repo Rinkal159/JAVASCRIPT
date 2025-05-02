@@ -3,7 +3,7 @@
 
 {
     function hello(name) {
-        console.log(`hello ${name}`);
+        // console.log(`hello ${name}`);
 
     }
     setTimeout(hello, 2000, "rinkal");
@@ -14,7 +14,7 @@
 {
     // console.log(`before`);
     setTimeout(() => {
-        console.log(`setTimeout`);
+        // console.log(`setTimeout`);
     }, 2000);
     // console.log(`after`);
 }
@@ -28,10 +28,7 @@
             arr[i] = num*2;
         });
 
-    //     console.log(arr1);
-
-    //     // console.log(arr1);
-
+        // console.log(arr1);
 
     }, 1000, arr)
 
@@ -41,11 +38,11 @@
     let arr1 = ["hi", "hello", 2]
     for (let i = 0; i < arr1.length; i++) {
         setTimeout(() => {
-            // console.log(arr1[i]);
+            console.log(arr1[i]);
 
         }, i*2000)
 
     }
-    // console.log(`after`);
+    console.log(`after`);
 
 }

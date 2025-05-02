@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Rinkal</h1>
+</body>
+
+<script src="script.js"></script>
+<script>
+    {
+        function create() {
+            let p = "para1"
+            setTimeout(() => {
+                p = "para2"
+            }, 2000);
+            return p
+        }
+
+        console.log(create());
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+
+    }
+
+    {
+        function create() {
+            let p = "para1"
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("para2")
+                }, 100);
+            })
+        }
+
+        create().then(console.log);
+
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+
+    }
+
+    {
+        function fetchData() {
+            let data = null;
+            setTimeout(() => {
+                data = "Fetched Data";
+            }, 2000);
+            return data; // This returns `null` immediately
+        }
+
+        console.log(fetchData()); // Output: null (Data isn't ready yet!)
+    }
+
+</script>
+
+</html>

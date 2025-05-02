@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const output = Math.floor(Math.random() * 5 + 1);
+        // console.log(output);
+
+        let num = prompt("Guess the number between 1 to 5").trim();
+        let input = Number(num);
+
+        if (num == "quit") {
+            console.log("you quit");
+        }
+
+        while (input != output && num != "quit") {
+            
+            if(input>5 || input<=0) {
+                input =Number(prompt("please type a valid number"))
+            }
+            input = Number(prompt("try again!"))
+
+        }
+        if (input == output) {
+            console.log(`yup!! the number was ${input}`);
+        }
+        
+
+
+    </script>
+</body>
+
+</html>
