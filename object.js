@@ -1,6 +1,14 @@
 // OBJECTS
 // --------------------------------------------------------------------------------------------------------------------------------------
 
+const timeStamps = Date.now(); //timestampes
+const date = new Date().toLocaleString(); //date
+
+// console.log(timeStamps); 
+// console.log(date); 
+
+
+
 {
     const obj = {
         name: "object1",
@@ -40,13 +48,13 @@
     }
 
     Object.defineProperty(animal, "name", {
-        writable: true,
-        configurable: false
+        writable: false, //cannot change value
+        configurable: false //cannot delete key
     })
 
     animal.name = "olive"
     delete animal.name
-    // console.log(animal);
+    console.log(animal);
 
     const pet = Object.create(animal, {
         name : {
@@ -176,5 +184,6 @@
 
     })
 
+    
 
 }
