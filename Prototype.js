@@ -1,3 +1,6 @@
+//* PROTOTYPE
+//& ----------
+
 //* In javascript, a class can have only one constructor.
 
 const discount = {
