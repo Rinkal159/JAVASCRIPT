@@ -1,7 +1,13 @@
-// OBJECTS
-// --------------------------------------------------------------------------------------------------------------------------------------
+//* OBJECTS
+//& --------------------------------------------------------------------------------------------------------------------------------------
 
-// Do not trust const objects to have constant contents!
+//^ Do not trust const objects to have constant contents!
+
+const timeStamps = Date.now(); //timestampes
+const date = new Date().toLocaleString(); //date
+
+// console.log(timeStamps); 
+// console.log(date); 
 
 
 {
@@ -43,13 +49,13 @@
     }
 
     Object.defineProperty(animal, "name", {
-        writable: true,
-        configurable: false
+        writable: false, //cannot change value
+        configurable: false //cannot delete key
     })
 
     animal.name = "olive"
     delete animal.name
-    // console.log(animal);
+    console.log(animal);
 
     const pet = Object.create(animal, {
         name : {
@@ -179,5 +185,6 @@
 
     })
 
+    
 
 }
