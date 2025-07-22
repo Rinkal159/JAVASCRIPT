@@ -16,11 +16,11 @@
 {
     // for (let i = 0; i <= 3; i++) {
 
-    // // const print = () => console.log(`hello world! ${i}`);
-    // // print();
+    // const print = () => console.log(`hello world! ${i}`);
+    // print();
 
     // (function() {
-    //     // console.log(`hellow world! : ${i}`);
+    //console.log(`hellow world! : ${i}`);
 
     // })();
     // }
@@ -59,9 +59,9 @@
 
     // const IIFE = ((x) => {
     //     return {
-    //         // value : () => console.log( `Root value : ${root}`),
-    //         // increment : () => console.log(`Increment : ${++x}`),
-    //         // decrement : () => console.log(`Decrement : ${--x}`)        
+    //          value : () => console.log( `Root value : ${root}`),
+    //          increment : () => console.log(`Increment : ${++x}`),
+    //          decrement : () => console.log(`Decrement : ${--x}`)        
     //     }
     // })(a)
 
@@ -83,9 +83,9 @@
 
 
     //     return {
-    //         // value: () => console.log(`Root value : ${root}`),
-    //         // increment: () => console.log(`Increment : ${++x}`),
-    //         // decrement: () => console.log(`Decrement : ${--x}`)
+    //         value: () => console.log(`Root value : ${root}`),
+    //         increment: () => console.log(`Increment : ${++x}`),
+    //         decrement: () => console.log(`Decrement : ${--x}`)
     //     }
     // }
 
