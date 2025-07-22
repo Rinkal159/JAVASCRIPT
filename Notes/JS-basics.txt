@@ -1,0 +1,561 @@
+***JavaScript is the only language that runs in the browser
+***Java is to JavaScript as car is to carpet
+***Ternary's latin root means "3", and it's the only JavaScript operator that takes three operands.
+
+*** 1 :  STATICALLY TYPED vs. DYNAMICALLY TYPED LANGUAGES:
+---------------------------------------------------------
+
+-> Statically Typed Languages → Type checking happens at compile time.
+-> Dynamically Typed Languages → Type checking happens at runtime.
+
+1. Statically Typed Languages: 
+------------------------------
+
+-> Variables have fixed types once declared.
+-> Type errors are caught before execution (at compile time).
+-> Examples: Java, C, C++, Swift, Go, TypeScript
+
+2. Dynamically Typed Languages:
+------------------------------
+
+-> Variables can change types at runtime.
+-> Type errors occur only when the code runs.
+-> Examples: JavaScript, Python, Ruby, PHP
+
+
+
+-> Use statically typed languages for large-scale applications (Java, C++, TypeScript).
+-> Use dynamically typed languages for quick development & scripting (JavaScript, Python).\
+
+
+
+*** 2 :  STACK AND HEAP : 
+-----------------------
+
+-> Stack Memory → Used for primitive values and function execution.
+-> Heap Memory → Used for objects and reference types (non-primitive values).
+
+
+-> in stack memory, the COPY of value is stored.
+	the copy is given to the variable who take the value from original variable, so the changes in successor values don't affect the predecessor's value.
+		complete privacy.
+		no sharing.
+
+-> in heap memory, the reference is given to successors.
+	it means, in heap, the successor takes the reference of the original value, so if the successor changes the value then the changes will be done in original value as well. so the successor here takes the reference of original value and make modifications in original value too.
+		no privacy.
+		complete sharing.
+
+
+
+*** 3 :  NUMBER METHODS : 
+-----------------------
+
+
+-> first variable name and then method : 
+
+let a = 5;
+
+a.toString();`
+a.toFixed(2);
+
+-> first method and variables in brackets : 
+
+let a = 5;
+
+parseInt(a);
+parseFloat(a);
+Number.isInteger(a);
+Number.isNaN(a);
+
+
+*** 4 :  STRING METHODS :
+-----------------------
+
+const str = "rinkal";
+
+console.log(str.length);
+
+console.log(str.charAt(0));
+
+console.log(str.indexOf('r'));
+
+console.log(str.substring(1, 4));	(first value count starts from 0, second value count starts from 1)
+
+console.log(str.slice(-5, -2));		(first value count starts from 1, second value count starts from 0) (firts one should always bigger than second one means the direction should be left to right)
+
+console.log(str.replace('ri', 'twi'));
+
+console.log(str.trim());
+
+console.log(str.split(""));
+
+console.log(str.includes('ink'));
+
+console.log(str.startsWith('r'));
+
+OUTOUT : 
+------
+
+6
+r
+0
+ink
+ink
+twinkal
+rinkal
+[ 'r', 'i', 'n', 'k', 'a', 'l' ]
+true
+true
+
+
+*** 5 :  MATH METHODS :
+----------------------
+
+const a = 13;
+
+console.log(Math.round(a));
+
+console.log(Math.ceil(a));
+
+console.log(Math.floor(a));
+
+console.log(Math.abs(a));
+
+console.log(Math.trunc(a));
+
+console.log(Math.sqrt(a));
+
+console.log(Math.cbrt(a));
+
+
+*** RANDOM METHOD : 
+
+const randomNumberInFloat = Math.random()*10;
+console.log(randomNumberInFloat.toFixed(2));
+
+const randomNumberInInt = Math.floor(Math.random()*10);
+console.log(randomNumberInInt);
+
+
+✔️ +1 ensures inclusion of the maximum value in whole-number ranges.
+✔️ Without +1, the maximum number will never appear.
+✔️ Use """Math.floor(Math.random() * (max - min + 1)) + min;""" for custom ranges.
+
+
+
+*** 6 :  API :
+-------------
+
+-> An API (Application Programming Interface) in JavaScript is a set of rules and tools that allows different software components to communicate with each other. APIs enable JavaScript to interact with browsers, servers, and third-party services.
+
+
+✔ API (Application Programming Interface) allows JavaScript to interact with systems.
+✔ Browser APIs (like DOM, Fetch) interact with web pages.
+✔ Third-Party APIs fetch data from external services.
+✔ Server APIs allow JavaScript (Node.js) to handle backend operations.
+
+
+*** DATE IN JS :
+----------------
+
+-> Creating a date object : 
+
+1) let now = new Date();
+2) let specificDate = new Date(2025, 1, 3);
+
+-> Getting date & time components :
+
+getFullYear();
+getMonth();
+getDate();
+getDay();
+getHours();
+getMinutes();
+getSeconds();
+getMiniseconds();
+
+-> Setting date & time components :
+
+setFullYear();
+setMonth();
+setDate();
+setHours();
+setMinutes();
+setSeconds();
+setMiniseconds();
+
+-> formatting dates : 
+
+toString();
+toDateString();
+toLocaleString();
+toLocaleDateString();
+
+-> timestamps : (A timestamp is the number of milliseconds since January 1, 1970.)
+
+let myDate = Date.now();
+
+
+
+*** ARRAY IN JS : 
+-----------------
+
+-> declaration : 
+
+let arr = [1, "hello", true, 2, "hi"];
+
+-> Array methods :
+
+push() : Adds element(s) at the end
+unshift() : Adds element(s) at the beginning
+pop() :	Removes last element
+shift() : Removes first element
+
+indexOf() : Returns the index of the first occurrence
+lastIndexOf() : Returns the index of the last occurrence
+includes() : Checks if an element exists
+find() : Returns first matching element
+findIndex() : Returns index of first matching element
+
+slice(start, end) : Extracts part of the array
+concat() : Merges arrays
+
+sort() : Sorts array
+reverse() : Reverses array
+
+join(separator) : Converts array to string
+toString() : Converts array to comma-separated string
+
+
+*** splice() : 
+--------------
+
+-> array.splice(start, deleteCount, item1, item2, ...)
+
+-> start → Index where changes begin.
+-> deleteCount → Number of elements to remove.
+-> item1, item2, ... → Elements to insert at the start position.
+
+-> eg. 
+
+let arr = ["a", "b", "c", "d", "e"];
+
+Using slice()
+console.log(arr.slice(1, 4)); // ["b", "c", "d"]
+console.log(arr); // ["a", "b", "c", "d", "e"] (unchanged)
+
+Using splice()
+console.log(arr.splice(1, 3, "X", "Y")); // ["b", "c", "d"] (removed elements)
+console.log(arr); // ["a", "X", "Y", "e"] (modified array)
+
+
+
+*** SPREAD OPERATOR :
+--------------------
+
+-> The spread operator (...) is used to expand elements of an array, object, or iterable. It is commonly used for copying, merging, or passing values.
+-> It does not modify the original array or object.
+-> Spread creates a new independent copy.
+
+eg. 
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers];
+
+console.log(newNumbers); // [1, 2, 3]
+console.log(numbers === newNumbers); // false (different references)
+
+
+eg. (merging two arrays with adding additional elements too)
+const numbers = [2, 3, 4];
+const newNumbers = [4,5,6]
+
+const mergeNumbers = [0, 1, ...numbers, ...newNumbers, 7]
+console.log(mergeNumbers); // [ 0, 1, 2, 3, 4, 4, 5, 6, 7 ]
+
+
+
+*** FLAT METHOD IN JS : (array method)
+-----------------------
+
+-> The flat() method in JavaScript is used to flatten nested arrays, meaning it removes nested structures and creates a single-level array.
+
+-> array.flat(depth)
+
+- depth (optional) → Specifies how deep to flatten. Default is 1.
+- Returns a new flattened array without modifying the original.
+
+eg.
+let arr = [1, 2, [3, 4], 5];
+let flatArr = arr.flat();
+
+console.log(flatArr); // [1, 2, 3, 4, 5]
+
+- Since no depth is specified, it defaults to 1 (flattens one level).
+
+-> If an array has empty slots (, ,), flat() removes them automatically.
+
+eg.
+let arr = [1, , 2, , 3];
+console.log(arr.flat()); // [1, 2, 3] (empty slots removed)
+
+
+***) Array.isArray(), Array.from(), and Array.of() in JavaScript :
+------------------------------------------------------------------
+
+1️⃣ Array.isArray() :
+
+-> The Array.isArray() method checks if a value is an array.
+
+2️⃣ Array.from() :
+
+-> The Array.from() method creates a new array from an iterable or array-like object.
+
+eg.
+let str = "hello";
+let arr = Array.from(str);
+console.log(arr); // ["h", "e", "l", "l", "o"]
+
+3️⃣ Array.of() :
+
+-> The Array.of() method creates a new array with given elements.
+
+-> Difference Between Array() and Array.of()
+
+eg.
+console.log(new Array(3));    // [ <3 empty slots> ] (creates an empty array with length 3)
+console.log(Array.of(3));     // [3] (creates an array with a single value)
+
+If you pass a single number to new Array(), it creates an empty array with that length.
+But Array.of() always creates an array with actual elements.
+
+-> another use of Array.of() :
+
+eg.
+const a = 12;
+const b = 13;
+const c = 14;
+
+console.log(Array.of(a, b, c)); // [12, 13, 14] (Making an array from variables)
+
+*** EMPTY ARRAY :
+------------------
+
+eg. 
+const emptyArr = [];
+console.log(emptyArr);  // []
+console.log(emptyArr[0]);  //undefined
+console.log(typeof(emptyArr));  //object
+console.log(emptyArr.length);  //0
+
+*** String to Array converter methods :
+---------------------------------------
+eg.
+
+let str = "hello";
+
+str.split(<separator>)
+Array.from(str)
+
+*** Array to String convertor methods:
+--------------------------------------
+eg.
+
+let arr = [1, 2, 3];
+
+arr.join(<separator>);
+arr.toString();
+
+*** Enhanced loops in array and objects : 
+----------------------------------------
+
+1) for ARRAY :
+
+	** for-of loop:
+	---------------
+
+	The for...of loop is used to iterate over iterable objects like arrays, strings, maps, sets, etc. It directly gives you the value of each element without dealing with indices. It is used to print elements with just 3 lines and without initializing, condition or incrementation part.
+
+
+	ex.
+		const fruits = ["apple", "banana", "cherry"];
+
+		for (const fruit of fruits) {
+  			console.log(fruit);
+		}
+
+	output :
+		apple  
+		banana  
+		cherry  
+
+	 ** Using for...of with Arrays of Objects :
+	----------------------------------
+
+	ex.
+		const users = [
+  					{ name: "Alice", age: 25 },
+  					{ name: "Bob", age: 30 }
+		];
+
+		for (const user of users) {
+  					console.log(`${user.name} is ${user.age} years old`);
+		}
+
+		//with destructuring
+		for (const {name, age} of arrOfObj) {
+        		console.log(`name is ${name} and age is ${age}`);       
+    		}
+
+	output :
+		Alice is 25 years old  
+		Bob is 30 years old 
+
+
+	** for-each loop :
+	------------------
+
+	The forEach loop is an array method used to execute a callback function for each element in an array. It's great for iterating through arrays without worrying about indices or manual loops.
+
+	ex 1.
+		const numbers = [1, 2, 3, 4, 5];
+
+    		numbers.forEach((num, index) => {
+        		console.log(`numbers are ${num*=2} and their indecies ${index}`);   
+    		})
+
+    		let multy = 1;
+    		numbers.forEach(num => multy *= num);
+    		console.log(multy);
+
+	output :
+		numbers are 2 and their indecies 0
+		numbers are 4 and their indecies 1
+		numbers are 6 and their indecies 2
+		numbers are 8 and their indecies 3
+		numbers are 10 and their indecies 4
+		120
+
+	ex 2.
+		// updation using foreach
+    		const arrOfObj = [
+        		{ name: "rinkal", age: 17, hasSister: false },
+        		{ name: "krina", age: 23, hasSister: false }
+    		]
+
+    		arrOfObj.forEach((arr) => {
+        		arr.hasSister = true;
+        		arr.age *= 2;
+        		arr.name = arr.name.split("");
+    		});
+
+        	console.log(arrOfObj);
+
+	output :
+		[
+  			{ name: [ 'r', 'i', 'n', 'k', 'a', 'l' ], age: 34, hasSister: true },
+  			{ name: [ 'k', 'r', 'i', 'n', 'a' ], age: 46, hasSister: true }
+		]
+
+	ex 3.
+		//mutating the actual array
+		const prices = [100, 200, 300];
+
+		prices.forEach((price, i, arr) => {
+  			arr[i] = price * 10;
+		});
+
+		console.log(prices);  // [1000, 2000, 3000]
+
+2) for OBJECT :
+
+	** for-in loop :
+	----------------
+
+	The for...in loop is used to iterate over the enumerable properties (keys) of an object. It's primarily designed for objects.
+
+	ex.
+		const user = {
+  			name: "Alice",
+  			age: 25,
+  			city: "New York"
+		};
+
+		for (let key in user) {
+  			console.log(`${key}: ${user[key]}`);
+		}
+
+	output :
+		name: Alice  
+		age: 25  
+		city: New York  
+
+
+
+
+*** GIT AND GITHUB :
+
+1) REMOTE(github) to LOCAL(vs code) :
+
+	1. create github repository
+	2. clone (git clone <link of repo>)
+	3. changes
+	4. check status (git status)
+	5. add (git add .)
+	6. commit (git commit -m "message")
+	7. push (git push origin <branch name>)
+
+2) LOCAL(vs code) to REMOTE(github) :
+
+	1. create directory (mkdir <directory name>) on local setup
+	2. create file (touch <filename>) and make changes
+	3. git init
+	4. create new github repo
+	5. commit on repo (git remote add origin <repo address>)
+	6. push (git push origin <branch name>)
+
+3) change or create branch :
+
+	-> git branch (to check the branch)
+	-> git branch -M <renamed branch name> (to rename a branch)
+	-> git checkout -b <new branch name> (to create a new branch)
+	-> git checkout <branch name> (to navigate)
+	-> git checkout -d <branch name> (to delete branch)
+
+
+
+*** SCOPE :
+-----------
+
+-> Scope defines where variables, functions, and objects are accessible in your code. It determines the visibility and lifetime of variables.
+
+
+Simple Explanation :
+
+-> the block scopes is like a little child having chocolate and the global scope is like an adult having chocolate.
+	if little child has no chocolate, he can take adult's chocolate means if block scope has no deifned variables inside, it takes global variables. but if it has defined variables inside, then it will not take adult's chocolate means it will use its own variables.
+	but if adult has not chocolate, he cannot dare to grab the little one's chocolate. means if global scope has no defined propertiess, but block scope has, even globle one cannot take that properties.
+	
+Types of scope :
+
+1. global scope.
+2. functional scope. (meams the curly braces of only functions)
+
+imp note : 	var is function-scoped, not block-scoped!
+
+3. block scope. (every curly braces-fucntion, if-else, loops)
+
+imp note :	var ignores block scope
+		let and const respect block scope
+
+
+
+
+*** CONFUSING TERMS in DOM:
+1) target vs currentTarget vs relatedTarget and this
+2) input vs change
+3) mouseover vs mouseenter and mouseout vs mouseleave
+4) clientX/clientY vs pageX/pageY vs screenX vs screenY
+5) innerText vs innerHTML vs textContent
+
+
