@@ -1,3 +1,6 @@
+//* DEEP and SHALLOW copy
+//& ----------------------
+
 const obj = {
     name: "rinkal",
     age: 18,
