@@ -1,3 +1,5 @@
+//* Basics of JavaScript
+
 // console.log("hello wortld!");
 
 // const a = 12;
