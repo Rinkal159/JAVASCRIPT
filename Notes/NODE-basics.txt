@@ -1,0 +1,72 @@
+*** "BTS of module.exports and require" :
+---------------------------------------
+
+-> module is any file where we write the code.
+-> one thing to remember every code is wrapped inside an illusive function, so we cannot access the variables, functions, objects etc of the function(module) from somewhere else.
+-> if we want to access them, module.exports is needed to export first. and then require is needed to import.
+
+** module.exports BTS :
+-> the code is enclosed within a function and module.exports helps to export the variables, functions etc to other modules.
+-> function has parameters such as module, require, exports, __filename, _dirname
+
+** require BTS :
+-> first, require wrappes all the imported code in IIFE. 
+-> it passes module, require as parameter and module.exports as argument which is an empty object.
+-> all the imported variables, functions etc becomes the value of module.exports and that value becomes the return value of require().
+
+** Four steps of require :
+1. Resolving the module(whether it is a js file, json file or node's own modules);
+2. Check the cache (if already loaded before).
+3. if not cached before,
+    i. loading the content(reads the content)  
+    ii. wrapes it in an IIFE.
+    iii. executes
+4. The value you assigned to module.exports becomes the return value of require().
+
+-> A file can only have one default export, but it can have numerous named exports!
+
+
+
+*** EVENT LOOP PHASES : 
+-----------------------
+
+-> Event loop is one of the component of libuv.
+-> Event loop is divided into four major phases : 
+
+1. Timer phase : It executes setTimeout and setInterval functions 
+2. Poll phase : It executes all the I/O functions.
+3. check phase : In this phase, setImmediate executes after the I/O function.
+                -Remember that, setImmediate executes always after I/O functions or after poll phase.
+4. Close phase : It Executes callbacks like 'close' events on sockets or file handles.
+
+
+-> Even before the phases start to execute, there is a functions named "process.nextTick" executes.
+-> Remember that, it runs immediately after the current operation completes, but before the event loop continues. and it has higher priority as it queues in the "microtask queue".
+
+-> The order of execution between setTimeout, setImmediate and process.nextTick is :
+1. process.nextTick (before any event loop)
+2. setTimeout (in the timers phase)
+3. setImmediate (in the check phase)
+
+-> it is not necessary that setTimeout always executes before setImmediate, in the I/O functions if the setTimeout and setImmediate both are defined then the setImmediate will execute first.
+
+-> process.nextTick() : process.nextTick() is a Node.js-specific function that schedules a callback to run immediately after the current operation completes, but before the event loop continues. It queues the callback in the "microtask queue", not in the main phases of the libuv event loop.
+
+
+*** THREAD POOL :
+-----------------
+
+-> To handle heavy I/O operations safely without blocking the main thread, libuv uses a thread pool.
+
+-> Default size: "4 threads"
+-> Used for:
+
+1. File system operations (e.g., uv_fs_*)
+
+2. DNS lookups using uv_getaddrinfo() and uv_getnameinfo() and crypto
+
+3. User-defined uv_queue_work() tasks
+
+-> You can chnage the size of thread pool by below statement:
+    process.env.UV_THREADPOOL_SIZE = <size>
+    maximum size you cam assign is 1024. 
