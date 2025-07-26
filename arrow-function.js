@@ -1,8 +1,8 @@
-// ARROW FUNCTION
-// --------------------------------------------------------------------------------------------------------------------------------------
+//* ARROW FUNCTION
+//& ---------------
 
 {
-  // const print = () => console.log(`print`);
+  const print = () => console.log(`print`);
 
   // print();
 }
@@ -23,7 +23,7 @@
 
   //   return reduceVar;
 
-  //   // console.log(average(num));
+  // console.log(average(num));
 
   //   const sum = (input) => {
   //     const reduceVar = input.reduce((acc, value) => acc + Number(value), 0);
@@ -31,7 +31,7 @@
   //     return reduceVar;
   //   }
 
-  //   // console.log(sum(num));
+  // console.log(sum(num));
   // }
 }
 
@@ -81,8 +81,8 @@
 
     age: 18,
 
-    printInfo : function({name : {fname, lname}}) {
-        console.log(`first name is ${fname} and last name is ${lname}`);
+    printInfo: function ({ name: { fname, lname } }) {
+      console.log(`first name is ${fname} and last name is ${lname}`);
 
     }
 
