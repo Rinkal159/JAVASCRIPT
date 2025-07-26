@@ -44,7 +44,7 @@ const date = new Date().toLocaleString(); //date
         name: "tizer",
         species: "dog",
         intro() {
-            console.log(`hello, my name is ${this.name} and my age is ${this.age} and my food is ${this.food}`);
+            // console.log(`hello, my name is ${this.name} and my age is ${this.age} and my food is ${this.food}`);
         }
     }
 
@@ -55,11 +55,11 @@ const date = new Date().toLocaleString(); //date
 
     animal.name = "olive"
     delete animal.name
-    console.log(animal);
+    // console.log(animal);
 
     const pet = Object.create(animal, {
-        name : {
-            value : "simran"
+        name: {
+            value: "simran"
         },
 
         age: {
@@ -86,7 +86,7 @@ const date = new Date().toLocaleString(); //date
     })
 
     // pet.intro();
-    
+
 
     // console.log(pet.species);
     // console.log(animal.species);
@@ -185,6 +185,65 @@ const date = new Date().toLocaleString(); //date
 
     })
 
-    
+
+
+}
+
+{
+    const obj = {
+        name: "rinkal",
+        age: 18,
+        neste: {
+            domain: "tech",
+            degree: "bca"
+        },
+        intereste: "coding",
+        birthdate: "1st may"
+    }
+
+    // console.log(Object/.keys(obj).length);
+
+}
+
+{
+    const obj = {
+        name: undefined,
+        age: 19
+    }
+    for (let key in obj) {
+
+        if (obj[key] === null || obj[key] === undefined) {
+            delete obj[key];
+        }
+    }
+    // console.log(obj);
+
+
+
+}
+
+{
+    const obj = {
+        name: {
+            fullName: {
+                fname: "rinkal"
+            }
+        }
+    }
+
+    function gen(obj, keyPath) {
+        if (keyPath) {
+            const updated = JSON.parse(JSON.stringify(keyPath));
+            
+            if (!obj[updated]) {
+                return "Key not found"
+            }
+            return obj[updated];
+        }
+    }
+
+    console.log(gen(obj, "name.fullname"));
+
+
 
 }
