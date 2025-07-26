@@ -1,5 +1,5 @@
-// high order function example when returning function in a function
-// -----------------------------------------------------------------------------------------------------------------------------------
+//* high order function example when returning function in a function
+//& ------------------------------------------------------------------
 
 {
     let x = 14;
@@ -22,11 +22,10 @@
 
     const IIFE = ((a, b) => {
         return {
-            // adding: () => console.log(a + b),
-            // substracting: () => console.log(a - b),
-            // multiplicating: () => console.log(a * b),
-            // dividing: () => console.log(a / b),
-
+            adding: () => console.log(a + b),
+            substracting: () => console.log(a - b),
+            multiplicating: () => console.log(a * b),
+            dividing: () => console.log(a / b),
         }
     })(x, y)
 
