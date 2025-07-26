@@ -1,3 +1,6 @@
+//* BOOT.DEV QUESTIONS
+//& -------------------
+
 let campaign = [
     {
         camp: "hello",
@@ -21,19 +24,19 @@ campaign.forEach((campa) => {
     campa.id = campa.camp + "-" + campa.name
 })
 
-console.log(campaign);
+// console.log(campaign);
 
 //& ------------------------------------------------------------------------------------------------
 
-// function formatter(a, b) {
-//     return a+b
-// }
-// function reformat(msg, callback) {
-//     const first = callback(msg, ".");
-//     const second = callback(first, ".");
-//     const third = callback(second, ".");
-//     return `TEXTIO: ${third}`;
-// }
+function formatter(a, b) {
+    return a+b
+}
+function reformat(msg, callback) {
+    const first = callback(msg, ".");
+    const second = callback(first, ".");
+    const third = callback(second, ".");
+    return `TEXTIO: ${third}`;
+}
 // console.log(reformat("hello", formatter));
 
 //& ------------------------------------------------------------------------------------------------
@@ -48,6 +51,6 @@ function createContact(phoneNumber, name = "Anonymous", avatar = "default.jpg") 
 
 }
 
-console.log(createContact());
+// console.log(createContact());
 
 
