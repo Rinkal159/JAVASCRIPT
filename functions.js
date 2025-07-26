@@ -1,5 +1,5 @@
-// FUNCTIONS
-// --------------------------------------------------------------------------------------------------------------------------------------
+//* FUNCTIONS
+//& ---------
 
 {
     // hoisted
@@ -141,8 +141,8 @@
     // function average() {
     //     let sum = 0;
 
-    //     // nums.forEach(num => sum += Number(num))
-    //     // console.log(` the average is ${sum/ nums.length}`);
+    // nums.forEach(num => sum += Number(num))
+    // console.log(` the average is ${sum/ nums.length}`);
 
     // }
 
