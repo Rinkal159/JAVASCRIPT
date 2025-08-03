@@ -1,5 +1,5 @@
-// REDUCE
-// -------------------------------------------------------------------------------------------------------------------------------------
+//* REDUCE
+//& ------
 
 {
     let arr = [1, 2, 3, 4, 5, 4, 2, 4];
@@ -45,7 +45,7 @@
 {
     const arr = [23, 56, 14, 29];
 
-    const max = arr.reduce((acc, num) => num > acc ? num : acc);
+    const max = arr.reduce((acc, num) => num > acc ? num : acc, arr[0]);
     // console.log(max);
 
     const max2 = arr.reduce((acc, value) => Math.max(acc, value), arr[0]);
@@ -61,11 +61,6 @@
     // console.log(multy);
 
     // console.log(arr);
-
-
-
-
-
 }
 
 {
@@ -82,7 +77,8 @@
         return acc;
     }, {})
 
-    console.log(grouping);
+
+    // console.log(grouping);
 
 
 
@@ -146,17 +142,17 @@
 {
     const arr = ["apple", "bannana", "cherry", "apple", "cherry"];
 
-    // // reduce👇
-    const remobing = arr.reduce((acc, fruit) => {
+    // reduce👇
+    const removing = arr.reduce((acc, fruit) => {
         if (!acc.includes(fruit)) {
             acc.push(fruit);
         }
         return acc;
     }, [])
-    // // console.log(remobing);
+    // console.log(removing);
 
 
-    // // for-each👇
+    // for-each👇
     let newArr = [];
     arr.forEach((fruit) => {
         if (!newArr.includes(fruit)) {
@@ -166,5 +162,41 @@
     });
     // console.log(newArr);
 
+
+}
+
+{
+    const inventary = [
+        { name: "a", stock: 30 },
+        { name: "b", stock: 120 },
+        { name: "c", stock: 45 },
+        { name: "d", stock: 70 },
+    ]
+
+    // const lowStocks = inventary.reduce((acc, curr) => {
+    //     if (curr.stock < 50) {
+    //         acc.push(curr.name);
+    //     }
+    //     return acc;
+    // }, []);
+
+    const lowStocks = inventary.filter((curr) => curr.stock < 50);
+
+    // console.log(lowStocks);
+
+}
+
+{
+    const userActivity = [
+        { user: "bob", activity: 43 },
+        { user: "arian", activity: 75 },
+        { user: "cortan", activity: 33 },
+        { user: "charlie", activity: 13 }
+    ]
+
+    const mostActiveNum = userActivity.reduce((acc, curr) =>  curr.activity > acc.activity ? curr : acc);
+
+    console.log(mostActiveNum);
+    
 
 }
