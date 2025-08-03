@@ -20,29 +20,29 @@
 }
 
 {
-    // let arr = [1, 2, 3, 4, 5];
+    let arr = [1, 2, 3, 4, 5];
 
-    // setTimeout((arr1) => {
+    setTimeout((arr1) => {
 
-    //     arr1.forEach((num, i, arr) => {
-    //         arr[i] = num*2;
-    //     });
+        arr1.forEach((num, i, arr) => {
+            arr[i] = num*2;
+        });
 
-    //     console.log(arr1);
+        // console.log(arr1);
 
-    // }, 1000, arr)
+    }, 1000, arr)
 
 }
 
 {
-    // let arr1 = ["hi", "hello", 2]
-    // for (let i = 0; i < arr1.length; i++) {
-    //     setTimeout(() => {
-    //         console.log(arr1[i]);
+    let arr1 = ["hi", "hello", 2]
+    for (let i = 0; i < arr1.length; i++) {
+        setTimeout(() => {
+            // console.log(arr1[i]);
 
-    //     }, i*2000)
+        }, i*2000)
 
-    // }
+    }
     // console.log(`after`);
 
 }
@@ -52,9 +52,7 @@
 
     let inc = setInterval(() => {
         let a = new Date().toLocaleTimeString();
-        console.log(a);
-
-
+        // console.log(a);
     }, 1000);
 
     setTimeout(() => {
