@@ -4,29 +4,8 @@
 {
     let arr = [1, 2, 3, 4, 5, 4, 2, 4];
 
-    // reduce👇
-
     const sum = arr.reduce((acc, curr) => acc + curr, 0);
     // console.log(sum);
-
-
-
-    // for each👇
-
-    let sum2 = 0;
-    arr.forEach((num) => sum2 += num);
-    // console.log(sum2);
-
-
-    // doubling values using foreach
-    arr.forEach((num, i, arr) => {
-        arr[i] = num * 2;
-
-    });
-    // console.log(arr);
-
-
-
 
 }
 
@@ -50,17 +29,6 @@
 
     const max2 = arr.reduce((acc, value) => Math.max(acc, value), arr[0]);
     // console.log(max2);
-
-    arr.forEach((value, i, arr) => {
-        arr[i] = value * 2
-    });
-    // console.log(arr);
-
-
-    const multy = arr.map(num => num * 2);
-    // console.log(multy);
-
-    // console.log(arr);
 }
 
 {
@@ -79,8 +47,6 @@
 
 
     // console.log(grouping);
-
-
 
 
     const animals = [
@@ -121,28 +87,14 @@
         { item: "bed", prices: 2000 }
     ]
 
-
-    // // reduce👇
     const sum = cart.reduce((acc, product) => acc + product.prices, 0)
     // console.log(sum);
-
-
-
-
-    // for-each👇
-
-    let sum2 = 0;
-    cart.forEach(({ prices }) => sum2 += prices);
-
-    // console.log(sum2);
-
 
 }
 
 {
     const arr = ["apple", "bannana", "cherry", "apple", "cherry"];
 
-    // reduce👇
     const removing = arr.reduce((acc, fruit) => {
         if (!acc.includes(fruit)) {
             acc.push(fruit);
@@ -150,18 +102,6 @@
         return acc;
     }, [])
     // console.log(removing);
-
-
-    // for-each👇
-    let newArr = [];
-    arr.forEach((fruit) => {
-        if (!newArr.includes(fruit)) {
-            newArr.push(fruit)
-        }
-        // return arr;
-    });
-    // console.log(newArr);
-
 
 }
 
@@ -215,7 +155,7 @@
         return acc;
     }, {})
 
-    console.log(totalExpenses);
+    // console.log(totalExpenses);
 }
 
 {
@@ -233,7 +173,7 @@
         return acc;
     }, {});
 
-    console.log(nonCompletedTasks);
+    // console.log(nonCompletedTasks);
 }
 
 {
