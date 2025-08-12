@@ -22,12 +22,14 @@
 
 
 
-let a = 13;
+// var a = 13;
 {
-    let a = 10;
-    console.log(a);
+    var a = 10;
+    // console.log(a);
     
 }
+// console.log(a);
+
 
 
 
@@ -53,7 +55,7 @@ let a = 13;
 
     // console.log(a + b);
 
-    outer();
+    // outer();
 }
 
 {
@@ -74,24 +76,24 @@ let a = 13;
 
         function inside() {
             let globalVar = "I'm local in bar";
-            // console.log(`inside : ${globalVar}`);
+            console.log(`inside : ${globalVar}`);
 
             function inInInside() {
                 let globalVar = "im very local";
-                // console.log(`in in inside : ${globalVar}`);
+                console.log(`in in inside : ${globalVar}`);
 
             }
 
-            inInInside();
+            // inInInside();
         }
 
-        inside();
+        // inside();
 
         // console.log(`outside : ${globalVar}`);
 
     }
 
-    outside();
+    // outside();
 }
 
 {
@@ -164,8 +166,8 @@ let a = 13;
         // let x = 3;
         // let y = 4;
 
-        inner();
+        // inner();
     }
 
-    outer()
+    // outer()
 }
