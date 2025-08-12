@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML, innerText and textContent</title>
+</head>
+
+<body>
+    <div id="underTheHood">
+        <h1>Hello</h1>
+        <p style="display: none;">Pyare saathiyo!</p>
+        <p id="demo2"></p>
+    </div>
+
+    <script>
+        const demo = document.querySelector("#underTheHood");
+        const demo2 = document.querySelector("#demo2")
+
+        
+        demo2.innerHTML = "<i>Aur dulaare</i>";
+        demo2.innerText = "<i>Aur dulaare</i>";
+        demo2.textContent = "<i>Aur dulaare</i>";
+
+        console.log(demo.innerHTML);
+        console.log(demo.innerText);
+        console.log(demo.textContent);
+
+        /* INNER HTML :
+            On console : displays all the html tags
+            On browser : Parses HTML and respects HTML tags thus displays only text.
+
+            INNER TEXT :
+            On console : Displays only the text, Parse HTML, respects its tags.
+            On Browser : Displays all the text irrespective of tags.
+
+            TEXT CONTENT :
+            On console : same as inner Text but displays hidden values too!
+            On Briswer : same as inner text.
+        */
+
+
+
+    </script>
+</body>
+
+</html>
