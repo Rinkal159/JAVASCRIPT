@@ -9,26 +9,37 @@
 
 <style>
     .applystyle {
+        display: block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
         color: red;
         background-color: yellow;
         border: none;
         box-shadow: 0 0 0 1px red;
+        border-radius: 10px;
+        transition: 0.3s ease-out;
+    }
+
+    .applystyle:hover {
+        background-color: rgb(255, 238, 0);
     }
 </style>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1 id="h1">VIRAT KOHLI</h1>
-    </div>
+    </div> -->
 
-    <!-- <ul id="language">
+    <ul id="language">
         <li>js</li>
-    </ul> -->
+    </ul>
 </body>
 
 <script>
 
-    // // create an element "img"
+    // CREATE "IMG" TAG
 
     // let newimg = document.createElement("img");
     // newimg.src = "https://wallpapercave.com/wp/wp3978060.jpg";
@@ -36,24 +47,19 @@
     // let container = document.querySelector(".container");
     // container.appendChild(newimg);
 
-
-    // -----------------------------------------------------------------------------------------------------------------------------------
-
-
-    // create an element "button" and setAttribute
+    // CREATE "BUTTON" TAG
 
     // let btn = document.createElement("button")
     // btn.innerText = "click here";
 
-    // // creating id is possible by dot dotation
+    // // creating id and class is possible by dot dotation
     // btn.id = "mybtn"
     // btn.className = "mystr"
     // btn.setAttribute("class", "mystr2");
-    // btn.setAttribute("class", "mystr3");
+    // btn.setAttribute("class", "mystr3");  //will override the class
 
-    // // this 👇 will automatically set a class called "applystyle"
-    // btn.classList.add("applystyle")
-    // // but it will not override the "mystr" class, instead btn has two classes now- "myatr" and "applystyel"
+    // // 👇 this will automatically set a class called "applystyle"
+    // btn.classList.add("applystyle") //will not override the class, instead add a new clas ot that element
 
     // btn.onclick = clickme;
     // function clickme() {
@@ -64,40 +70,38 @@
     // console.log(btn);
 
 
-    // -----------------------------------------------------------------------------------------------------------------------------------
+    // --------------------------------------------------------------------------------------------------
 
 
-    // createAttribute
+    // CREATE ATTRIBUTE
 
     // let btn = document.createElement("button");
     // btn.innerText = "Click Me";
 
-    // let attr = document.createAttribute("id");
+    // // btn.setAttribute("id", "myBtn"); //simply attaching id
+
+    // let attr = document.createAttribute("id"); //creating attribute, assgining value then append it.
     // attr.value = "myButton";
-
     // btn.setAttributeNode(attr);
+
     // document.body.appendChild(btn);
+    // console.log(btn);
 
 
-    // -----------------------------------------------------------------------------------------------------------------------------------
 
-    // adding additional values
+    // ---------------------------------------------------------------------------------------------------
+
+    // ADDING ADDITIONAL VALUES
 
     const lang = ["java", "python", "ruby", "go"]
 
     function addLanguages(name) {
-        // const li = document.createElement("li");
-        // li.innerText = name;
-
-        // document.querySelector("#language").appendChild(li)
-
         name.forEach(value => {
             const li = document.createElement("li");
             li.innerText = value;
 
             document.querySelector("#language").appendChild(li)
         });
-
     }
 
     addLanguages(lang)
@@ -105,22 +109,12 @@
     function replace(lang) {
         const oldel = document.querySelector("li:first-child");
         const newel = document.createElement("li");
-        newel.appendChild(document.createTextNode(lang))
-
+        newel.textContent = `${lang}`;
         oldel.replaceWith(newel);
-        newel.appendChild(document.createTextNode("++"))
-        // newel.innerText = "++"
-
-
     }
 
-    replace("c")
-
-    // addLanguages("java")
-    // addLanguages("python")
-    // addLanguages("php")
-    // addLanguages("go")
-    // addLanguages("rust")
+    replace("C++");
+    replace("JavaScript");
 
 
 
